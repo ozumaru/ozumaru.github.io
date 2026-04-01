@@ -204,7 +204,7 @@ function initTerminal() {
 
         // 2. Inicia a digitação linha a linha
         startTerminalLines();
-    }, 1900); // pequena folga após o último elemento do hero
+    }, 1200); // pequena folga após o último elemento do hero
 }
 
 function startTerminalLines() {
