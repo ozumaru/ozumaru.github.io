@@ -1,313 +1,342 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>José Osmar Caitano | NetDevOps Engineer</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>José Osmar Caitano | NetDevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --accent: #00f5ff;
+      --text: #e0e0e0;
+      --text2: #aaaaaa;
+    }
 
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Background sutil */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 20%, rgba(0, 245, 255, 0.08) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 24px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,245,255,0.1);
+    }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text2);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0 5%;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 820px;
+    }
+
+    .hero-tag {
+      font-size: 0.95rem;
+      letter-spacing: 4px;
+      color: var(--accent);
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.3s forwards;
+    }
+
+    .hero-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3.2rem, 8vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.5s forwards;
+    }
+
+    .hero-name span { color: var(--accent); }
+
+    .hero-title {
+      font-size: 1.4rem;
+      color: var(--text2);
+      margin-bottom: 32px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.7s forwards;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      max-width: 520px;
+      color: var(--text2);
+      margin-bottom: 48px;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.9s forwards;
+    }
+
+    /* Botões */
+    .btn {
+      padding: 16px 32px;
+      border-radius: 9999px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0a0a0a;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(0, 245, 255, 0.3);
+    }
+
+    /* Seções */
+    section {
+      padding: 120px 5%;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+    }
+
+    /* Cards de Projeto - estilo Tomas */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 32px;
+    }
+
+    .project-card {
+      background: var(--surface);
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .project-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(0, 245, 255, 0.15);
+    }
+
+    .project-image {
+      height: 240px;
+      background: linear-gradient(135deg, #111, #222);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      color: var(--accent);
+      position: relative;
+    }
+
+    .project-content {
+      padding: 28px;
+    }
+
+    .project-tag {
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .project-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+
+    .project-desc {
+      color: var(--text2);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-badge {
+      background: rgba(0,245,255,0.1);
+      color: var(--accent);
+      padding: 4px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    /* Animações */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body>
 
-<div class="grid-bg"></div>
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">OZUMARU</div>
+    <ul class="nav-links">
+      <li><a href="#about">Sobre</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+  </nav>
 
-<!-- NAV -->
-<nav>
-  <a class="nav-logo" href="#"><span>//</span> OZUMARU</a>
-  <ul class="nav-links">
-    <li><a href="#about">SOBRE</a></li>
-    <li><a href="#skills">SKILLS</a></li>
-    <li><a href="#projects">PROJETOS</a></li>
-    <!-- <li><a href="projects.html">PROJETOS</a></li> -->
-    <li><a href="#certs">CERTS</a></li>
-    <li><a href="#contact">CONTATO</a></li>
-  </ul>
-</nav>
-
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-orb"></div>
-  <div class="hero-content">
-    <div class="hero-tag">⚡ NETDEVOPS ENGINEER · SÃO PAULO · BR</div>
-    <h1 class="hero-name">José Osmar<br><span class="accent">Caitano</span></h1>
-    <div class="hero-title">Infrastructure Analyst &amp; Network Automation</div>
-    <p class="hero-desc">
-      Infraestrutura de redes encontra código. Construo ferramentas que automatizam 
-      o impossível — da linha de comando ao dashboard em produção.
-    </p>
-    <div class="hero-btns">
-      <a href="#projects" class="btn btn-primary">▸ VER PROJETOS</a>
-      <a href="https://github.com/ozumaru" target="_blank" class="btn btn-outline">⌥ GITHUB</a>
-      <a href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank" class="btn btn-outline">▶ YOUTUBE</a>
-    </div>
-
-    <div class="terminal">
-      <div><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> whoami</div>
-      <div class="out">Network Engineer → Python Developer → NetDevOps Practitioner</div>
-      <div><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> cat certifications.txt</div>
-      <div class="out">CCNA Routing &amp; Switching | CCNA DevNet</div>
-      <div><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> <span class="cursor"></span></div>
-    </div>
-  </div>
-</div>
-
-<div class="divider"></div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-header fade-in">
-    <div class="section-tag">SOBRE</div>
-    <h2 class="section-title">Quem é o <span>Ozumaru</span>?</h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="about-grid fade-in">
-    <div class="about-text">
-      <p>
-        Desde <strong>2017</strong> trabalhando com infraestrutura de redes — e em constante 
-        evolução no mundo da <strong>automação e programação</strong>. Aprendi Python 
-        para resolver problemas reais do dia a dia e agora compartilho essa jornada.
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">NETDEVOPS ENGINEER • SÃO PAULO</div>
+      <h1 class="hero-name">José Osmar<br><span>Caitano</span></h1>
+      <div class="hero-title">Transformo infraestrutura em código</div>
+      <p class="hero-desc">
+        Especialista em automação de redes, Python, NetBox e NetDevOps. 
+        Construo soluções que escalam e simplificam o complexo.
       </p>
-      <p>
-        Meu foco é o universo <strong>NetDevOps</strong>: unir o conhecimento de redes 
-        com desenvolvimento de software para criar soluções que escalam. Ansible, Netmiko, 
-        FastAPI, NetBox — ferramentas que uso no trabalho todo dia.
-      </p>
-      <p>
-        Além dos projetos, mantenho um <strong>canal no YouTube</strong> onde compartilho 
-        conteúdo técnico sobre automação de redes — porque o melhor jeito de aprender é ensinando.
-      </p>
-      <div class="about-quote">
-        "Eu renasço a cada desafio. O mundo pode tentar me derrubar, mas toda queda 
-        é apenas o momento em que desperto um novo poder. Eu não caminho… eu avanço."
-        <br><br>— inspirado em Sung Jin-Woo, Shadow Monarch
-      </div>
-    </div>
-    <div class="about-stats">
-      <div class="stat-card">
-        <div class="stat-num">8+</div>
-        <div class="stat-label">Anos em Redes</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">2</div>
-        <div class="stat-label">Certificações Cisco</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">180+</div>
-        <div class="stat-label">GitHub Followers</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">21</div>
-        <div class="stat-label">Repositórios</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-header fade-in">
-    <div class="section-tag">TECH</div>
-    <h2 class="section-title">Stack &amp; <span>Skills</span></h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="skills-grid fade-in">
-    <div class="skill-group">
-      <div class="skill-group-title">// NETWORK</div>
-      <ul class="skill-list">
-        <li class="skill-item">Cisco IOS / NX-OS</li>
-        <li class="skill-item">CCNA Routing &amp; Switching</li>
-        <li class="skill-item">VLAN, BGP, OSPF</li>
-        <li class="skill-item">YANG / NETCONF / RESTCONF</li>
-        <li class="skill-item">Cisco CML / GNS3</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">// AUTOMATION</div>
-      <ul class="skill-list">
-        <li class="skill-item">Python 3</li>
-        <li class="skill-item">Ansible</li>
-        <li class="skill-item">Netmiko</li>
-        <li class="skill-item">pyATS / Genie</li>
-        <li class="skill-item">Jinja2 Templates</li>
-      </ul>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">// DEVOPS &amp; WEB</div>
-      <ul class="skill-list">
-        <li class="skill-item">FastAPI</li>
-        <li class="skill-item">Streamlit</li>
-        <li class="skill-item">NetBox (IPAM/DCIM)</li>
-        <li class="skill-item">Redis</li>
-        <li class="skill-item">GitLab CI/CD</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header fade-in">
-    <div class="section-tag">CÓDIGO</div>
-    <h2 class="section-title">Projetos em <span>Destaque</span></h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="projects-grid fade-in">
-
-    <!-- Projeto 1: CiscoDevNet - Primeiros Passos -->
-    <a class="project-card" href="projects/cisco-devnet-python.html">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">// PYTHON • NETMIKO • BÁSICO</div>
-      <div class="project-title">CiscoDevNet — Python</div>
-      <p class="project-desc">
-        Ferramentas completas de automação Cisco com Python + Netmiko. 
-        Do básico (SSH, comandos simples) até coleta de CDP e exportação em CSV.
-      </p>
-      <div class="project-tech">
-        <span class="tech-badge">Python</span>
-        <span class="tech-badge">Netmiko</span>
-        <span class="tech-badge">Cisco IOS</span>
-      </div>
-    </a>
-
-    <!-- Projeto 2: CiscoDevNet - Mini-Projeto com Refatoração (POO) -->
-    <a class="project-card" href="projects/automation-projects-one.html">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">// PYTHON • NETMIKO • REFACTORING</div>
-      <div class="project-title">CiscoDevNet — Mini Projeto</div>
-      <p class="project-desc">
-        Backup automático, relatório de interfaces em JSON e criação de VLANs em massa. 
-        Forte ênfase em refatoração e boas práticas de código (POO).
-      </p>
-      <div class="project-tech">
-        <span class="tech-badge">Python</span>
-        <span class="tech-badge">Netmiko</span>
-        <span class="tech-badge">Refatoração</span>
-        <span class="tech-badge">POO</span>
-      </div>
-    </a>
-
-    <!-- Projeto 3: NetBox Inventory Sync (Privado) -->
-    <a class="project-card" href="projects/netbox-inventory-sync.html">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">// NETBOX • API • INTERNO</div>
-      <div class="project-title">NetBox Inventory Sync</div>
-      <p class="project-desc">
-        Motor de reconciliação automática de inventário. Sincroniza CSV ↔ NetBox com validações 
-        hierárquicas completas (Manufacturers, Roles, Models, Sites, Devices, MGMT IP, etc).
-      </p>
-      <div class="project-tech">
-        <span class="tech-badge">Python</span>
-        <span class="tech-badge">NetBox API</span>
-        <span class="tech-badge">Pandas</span>
-        <span class="tech-badge">Reconciliação</span>
-      </div>
-    </a>
-
-    <!-- Projeto 4: Sublime Text -->
-    <a class="project-card" href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank">
-      <span class="project-arrow">↗</span>
-      <div class="project-tag">// PRODUTIVIDADE • CONFIG</div>
-      <div class="project-title">Ozumaru Sublime Text</div>
-      <p class="project-desc">
-        Coleção de atalhos, snippets e configurações otimizadas para quem trabalha com Python 
-        e automação de redes.
-      </p>
-      <div class="project-tech">
-        <span class="tech-badge">Sublime Text</span>
-        <span class="tech-badge">Snippets</span>
-      </div>
-    </a>
-
-  </div>
-</section>
-<!-- PROJETOS -->
-
-<div class="divider"></div>
-
-<!-- CERTS -->
-<section id="certs">
-  <div class="section-header fade-in">
-    <div class="section-tag">CERTS</div>
-    <h2 class="section-title">Certificações <span>Cisco</span></h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="certs-grid fade-in">
-    <div class="cert-card">
-      <div class="cert-icon">🛜</div>
       <div>
-        <div class="cert-name">CCNA: Routing &amp; Switching</div>
-        <div class="cert-issuer">CISCO SYSTEMS · NETWORKING</div>
-      </div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🤖</div>
-      <div>
-        <div class="cert-name">CCNA: DevNet</div>
-        <div class="cert-issuer">CISCO SYSTEMS · AUTOMATION</div>
+        <a href="#projects" class="btn btn-primary">Ver Projetos</a>
       </div>
     </div>
   </div>
-</section>
 
-<div class="divider"></div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-header fade-in">
-    <div class="section-tag">CONTATO</div>
-    <h2 class="section-title">Vamos <span>Conectar</span></h2>
-    <div class="section-line"></div>
-  </div>
-  <div class="contact-grid fade-in">
-    <div class="contact-text">
-      <h3>Bora trocar ideia sobre NetDevOps?</h3>
-      <p>
-        Seja para colaborar em projetos, tirar dúvidas sobre automação de redes 
-        ou simplesmente conectar com alguém da mesma área — estou por aqui.
-      </p>
+  <!-- PROJETOS (já com estilo novo) -->
+  <section id="projects">
+    <div class="section-header fade-in">
+      <div class="section-tag">TRABALHOS</div>
+      <h2 class="section-title">Projetos em Destaque</h2>
     </div>
-    <div class="contact-links">
-      <a class="contact-link" href="https://github.com/ozumaru" target="_blank">
-        <div class="contact-link-icon">⌥</div>
-        <div class="contact-link-info">
-          <div class="contact-link-label">GITHUB</div>
-          <div class="contact-link-value">github.com/ozumaru</div>
-        </div>
-        <span>↗</span>
-      </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/jose-osmar-caitano/" target="_blank">
-        <div class="contact-link-icon">💼</div>
-        <div class="contact-link-info">
-          <div class="contact-link-label">LINKEDIN</div>
-          <div class="contact-link-value">in/jose-osmar-caitano</div>
-        </div>
-        <span>↗</span>
-      </a>
-      <a class="contact-link" href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank">
-        <div class="contact-link-icon">▶</div>
-        <div class="contact-link-info">
-          <div class="contact-link-label">YOUTUBE</div>
-          <div class="contact-link-value">@NetDevOps_Ozumaru</div>
-        </div>
-        <span>↗</span>
-      </a>
+
+    <div class="projects-grid fade-in">
+      <!-- Seus 4 cards aqui (use a versão que te passei antes) -->
+      <!-- ... cole os 4 cards que combinamos na mensagem anterior ... -->
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">// OZUMARU</div>
-  <div class="footer-copy">© 2025 · José Osmar Caitano · São Paulo, BR · NetDevOps 🐦‍🔥</div>
-</footer>
+  <!-- JS -->
+  <script>
+    // Intersection Observer para animações suaves
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
 
-<script src="assets/js/main.js"></script>
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Nav active
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-links a');
+      let current = '';
+
+      sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 300) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
 </body>
 </html>
