@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projetos | José Osmar Caitano | NetDevOps Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- CSS separado -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html"><span>//</span> OZUMARU</a>
+    <ul class="nav-links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html#about">SOBRE</a></li>
+      <li><a href="index.html#skills">SKILLS</a></li>
+      <li><a href="projects.html" class="active">PROJETOS</a></li>
+      <li><a href="index.html#certs">CERTS</a></li>
+      <li><a href="index.html#contact">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO PROJETOS -->
+  <div class="hero" style="min-height: 60vh; padding-top: 140px;">
+    <div class="hero-content" style="max-width: 900px;">
+      <div class="hero-tag">CÓDIGO • AUTOMACÃO • NETDEVOPS</div>
+      <h1 class="hero-name">Projetos em <span class="accent">Destaque</span></h1>
+      <div class="hero-title">Ferramentas reais que uso no dia a dia de Network Engineer</div>
+      <p class="hero-desc">
+        Aqui você encontra tudo que construí para transformar infraestrutura manual em automação escalável.
+      </p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- PROJETOS GRID -->
+  <section id="projects-list" style="padding-top: 40px;">
+    <div class="section-header fade-in">
+      <div class="section-tag">REPOS</div>
+      <h2 class="section-title">Meus <span>Projetos</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="projects-grid fade-in" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 32px;">
+      
+      <!-- Projeto 1: CiscoDevNet - exemplo analisado -->
+      <a class="project-card" href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank">
+        <span class="project-arrow">↗</span>
+        <div class="project-tag">// PYTHON • NETMIKO • CISCO</div>
+        <div class="project-title">CiscoDevNet — Python</div>
+        <p class="project-desc">
+          Ferramentas completas de automação para redes Cisco. Coleta de configuração, criação de VLANs, 
+          Loopbacks, P2P, exportação em CSV e scripts modulares com Netmiko. 
+          <strong>Guia prático do básico ao avançado.</strong>
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Netmiko</span>
+          <span class="tech-badge">Cisco IOS</span>
+          <span class="tech-badge">NetDevOps</span>
+        </div>
+      </a>
+
+      <!-- Projeto 2 -->
+      <a class="project-card" href="https://github.com/ozumaru" target="_blank">
+        <span class="project-arrow">↗</span>
+        <div class="project-tag">// FASTAPI • STREAMLIT • EM ANDAMENTO</div>
+        <div class="project-title">AutoNetOps Dashboard</div>
+        <p class="project-desc">
+          Dashboard completo de gerenciamento de redes: integração com NetBox, automação via Netmiko, 
+          templates Jinja2, cache Redis e interface moderna em Streamlit + backend FastAPI.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">FastAPI</span>
+          <span class="tech-badge">Streamlit</span>
+          <span class="tech-badge">NetBox</span>
+          <span class="tech-badge">Redis</span>
+        </div>
+      </a>
+
+      <!-- Projeto 3 -->
+      <a class="project-card" href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank">
+        <span class="project-arrow">↗</span>
+        <div class="project-tag">// PRODUTIVIDADE • CONFIG</div>
+        <div class="project-title">Ozumaru Sublime Text</div>
+        <p class="project-desc">
+          Pacote completo de atalhos, snippets e configurações otimizadas para Network Engineers 
+          que trabalham com Python, Ansible e automação de redes.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Sublime Text</span>
+          <span class="tech-badge">Snippets</span>
+          <span class="tech-badge">Config</span>
+        </div>
+      </a>
+
+      <!-- Projeto 4 -->
+      <a class="project-card" href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank">
+        <span class="project-arrow">↗</span>
+        <div class="project-tag">// CONTEÚDO • TUTORIAIS</div>
+        <div class="project-title">Canal NetDevOps Ozumaru</div>
+        <p class="project-desc">
+          Tutoriais ao vivo, projetos práticos e explicações profundas sobre Python para redes, 
+          Ansible, Netmiko, certificações Cisco DevNet e NetDevOps.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">YouTube</span>
+          <span class="tech-badge">NetDevOps</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Ansible</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">// OZUMARU</div>
+    <div class="footer-copy">© 2025 · José Osmar Caitano · São Paulo, BR · NetDevOps 🐦‍🔥</div>
+    <a href="index.html" style="color:var(--cyan); font-family:'Share Tech Mono', monospace; font-size:0.8rem;">← Voltar para Home</a>
+  </footer>
+
+  <!-- JS separado -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
