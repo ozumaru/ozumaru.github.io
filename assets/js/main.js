@@ -26,9 +26,9 @@
 // });
 
 
-// // =============================================
-// // main.js - Ozumaru Portfolio
-// // =============================================
+// =============================================
+// main.js - Ozumaru Portfolio
+// =============================================
 
 // Animações de entrada do Hero + Terminal Typewriter
 document.addEventListener("DOMContentLoaded", () => {
@@ -60,86 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         startTypewriter();
     }, 2800);
 });
-
-// // ======================
-// // Typewriter Effect
-// // ======================
-// function startTypewriter() {
-//     const whoamiText = "Network Engineer → Python Developer → NetDevOps Practitioner";
-//     const certText   = "CCNA Routing & Switching | CCNA DevNet";
-
-//     const whoamiEl = document.getElementById('whoami-output');
-//     const certEl   = document.getElementById('cert-output');
-//     const cursor   = document.getElementById('cursor');
-
-//     if (!whoamiEl || !certEl) return;
-
-//     let i = 0;
-//     let j = 0;
-
-//     function typeWhoami() {
-//         if (i < whoamiText.length) {
-//             whoamiEl.textContent += whoamiText.charAt(i);
-//             i++;
-//             setTimeout(typeWhoami, 35);
-//         } else {
-//             setTimeout(typeCert, 600);
-//         }
-//     }
-
-//     function typeCert() {
-//         if (j < certText.length) {
-//             certEl.textContent += certText.charAt(j);
-//             j++;
-//             setTimeout(typeCert, 28);
-//         } else {
-//             // Mantém o cursor piscando no final
-//             cursor.style.animation = "blink 1s step-end infinite";
-//         }
-//     }
-
-//     typeWhoami();
-// }
-
-// // ======================
-// // Intersection Observer (para fade-in das seções)
-// // ======================
-// const observer = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             entry.target.classList.add('visible');
-//             // observer.unobserve(entry.target); // opcional: remover após animar
-//         }
-//     });
-// }, {
-//     threshold: 0.15,
-//     rootMargin: "0px 0px -50px 0px"
-// });
-
-// document.querySelectorAll('.fade-in').forEach(el => {
-//     observer.observe(el);
-// });
-
-// // ======================
-// // Nav Active State
-// // ======================
-// window.addEventListener('scroll', () => {
-//     const sections = document.querySelectorAll('section[id]');
-//     const navLinks = document.querySelectorAll('.nav-links a');
-//     let current = '';
-
-//     sections.forEach(section => {
-//         if (window.scrollY >= section.offsetTop - 200) {
-//             current = section.getAttribute('id');
-//         }
-//     });
-
-//     navLinks.forEach(link => {
-//         link.style.color = (link.getAttribute('href') === '#' + current) 
-//             ? 'var(--cyan)' 
-//             : '';
-//     });
-// });
 
 // ======================
 // TERMINAL BASH REALISTA - Sequencial
@@ -189,6 +109,48 @@ function startTypewriter() {
     }, delay += 1400);
 
 }
+
+// ======================
+// Intersection Observer (para fade-in das seções)
+// ======================
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            // observer.unobserve(entry.target); // opcional: remover após animar
+        }
+    });
+}, {
+    threshold: 0.15,
+    rootMargin: "0px 0px -50px 0px"
+});
+
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
+// ======================
+// Nav Active State
+// ======================
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    let current = '';
+
+    sections.forEach(section => {
+        if (window.scrollY >= section.offsetTop - 200) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.style.color = (link.getAttribute('href') === '#' + current) 
+            ? 'var(--cyan)' 
+            : '';
+    });
+});
+
+
 
 // Função auxiliar para digitar texto letra por letra
 function typeText(element, text, speed, callback) {
