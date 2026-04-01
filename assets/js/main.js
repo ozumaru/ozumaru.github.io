@@ -187,6 +187,15 @@ function startTypewriter() {
     setTimeout(() => {
         finalCursor.style.animation = "blink 1s step-end infinite";
     }, delay += 1400);
+
+    // Terminal aparece depois do hero
+    setTimeout(() => {
+        terminal.style.transition = "all 0.8s ease-out";
+        terminal.style.opacity = 1;
+        terminal.style.transform = "translateY(0)";
+
+        startTypewriter();     // ← Chama a nova função
+    }, 2800);   // você pode ajustar esse tempo (2800 = 2.8 segundos)    
 }
 
 // Função auxiliar para digitar texto letra por letra
