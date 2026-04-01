@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 48px;
     align-items: center;
+    max-width: 100%;
 }
 
 .contact-text h3 {
