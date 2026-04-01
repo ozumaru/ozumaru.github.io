@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetBox Inventory Sync | Ozumaru</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <nav>
+    <a class="nav-logo" href="../index.html"><span>//</span> OZUMARU</a>
+    <ul class="nav-links">
+      <li><a href="../index.html">HOME</a></li>
+      <li><a href="../index.html#about">SOBRE</a></li>
+      <li><a href="../index.html#skills">SKILLS</a></li>
+      <li><a href="../index.html#projects">PROJETOS</a></li>
+      <li><a href="../index.html#certs">CERTS</a></li>
+      <li><a href="../index.html#contact">CONTATO</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero" style="min-height: 65vh; padding-top: 140px;">
+    <div class="hero-content" style="max-width: 920px;">
+      <div class="hero-tag">NETDEVOPS • INTERNO • NETBOX</div>
+      <h1 class="hero-name">NetBox Inventory<br><span class="accent">Sync Engine</span></h1>
+      <div class="hero-title">Sincronização Automática de Inventário Corporativo</div>
+      <p class="hero-desc">
+        Motor de reconciliação que mantém o NetBox sempre consistente com a realidade da rede, 
+        sincronizando automaticamente dados de um banco CSV com validações hierárquicas completas.
+      </p>
+      <div class="hero-btns">
+        <a href="../index.html#projects" class="btn btn-outline">← VOLTAR AOS PROJETOS</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <section style="padding: 80px 40px; max-width: 1100px; margin: 0 auto;">
+    <div class="section-header fade-in">
+      <div class="section-tag">PROJETO INTERNO</div>
+      <h2 class="section-title">Reconciliação de <span>Inventário NetBox</span></h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="about-text" style="max-width: 850px; margin-bottom: 60px;">
+      <p>
+        Projeto interno de automação avançada desenvolvido para garantir <strong>consistência total</strong> 
+        do inventário de rede no NetBox. Ele compara o estado desejado (CSV) com o estado atual no NetBox 
+        e realiza todas as criações e atualizações necessárias de forma hierárquica e idempotente.
+      </p>
+    </div>
+
+    <!-- Funcionalidades Principais -->
+    <h3 style="margin: 50px 0 25px; color: var(--cyan);">✅ O que o sistema faz automaticamente</h3>
+    <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+      <div class="project-card" style="cursor: default;">
+        <div class="project-title">Manufacturers</div>
+        <p class="project-desc">Cria fabricantes se não existirem</p>
+      </div>
+      <div class="project-card" style="cursor: default;">
+        <div class="project-title">Device Roles</div>
+        <p class="project-desc">Cria papéis (Switch, Router, etc.)</p>
+      </div>
+      <div class="project-card" style="cursor: default;">
+        <div class="project-title">Device Types (Models)</div>
+        <p class="project-desc">Cria modelos de equipamentos</p>
+      </div>
+      <div class="project-card" style="cursor: default;">
+        <div class="project-title">Sites & Locations</div>
+        <p class="project-desc">Gerencia sites e localidades</p>
+      </div>
+      <div class="project-card" style="cursor: default;">
+        <div class="project-title">Devices + MGMT Interface</div>
+        <p class="project-desc">Cadastra dispositivos e interface de gerenciamento</p>
+      </div>
+      <div class="project-card" style="cursor: default;">
+        <div class="project-title">IPv4 Management</div>
+        <p class="project-desc">Configura IP de gerenciamento e define como Primary</p>
+      </div>
+    </div>
+
+    <!-- Arquitetura -->
+    <h3 style="margin: 70px 0 30px; color: var(--cyan);">🏗️ Arquitetura em Camadas</h3>
+    <div class="about-text">
+      <p><strong>Camadas principais do projeto:</strong></p>
+      <ul style="font-family: 'Share Tech Mono', monospace; line-height: 2.2; color: var(--text);">
+        <li><strong>Conexão API</strong> — Requisições REST seguras e padronizadas</li>
+        <li><strong>Coleta de Dados</strong> — Leitura do CSV + consulta completa no NetBox</li>
+        <li><strong>Validação Hierárquica</strong> — Verifica existência antes de criar (idempotente)</li>
+        <li><strong>Orquestração</strong> — Fluxo controlado em `main_netbox.py`</li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 60px; text-align: center;">
+      <div style="background: var(--surface); border: 1px solid var(--border); padding: 28px; border-radius: 4px; max-width: 700px; margin: 0 auto;">
+        <p style="color: var(--orange); font-family: 'Share Tech Mono', monospace; margin-bottom: 12px;">
+          STATUS: PROJETO INTERNO ATIVO
+        </p>
+        <p style="color: var(--text2);">
+          Este projeto demonstra minha capacidade de construir soluções de automação robustas, 
+          com arquitetura modular, validações fortes e integração profunda com NetBox.
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 80px; text-align: center;">
+      <a href="../index.html#projects" class="btn btn-primary" style="padding: 16px 48px;">
+        VOLTAR PARA PROJETOS
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>
+    <div class="footer-logo">// OZUMARU</div>
+    <div class="footer-copy">© 2025 · José Osmar Caitano · NetDevOps</div>
+    <a href="../index.html" style="color:var(--cyan);">← Voltar para Home</a>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
