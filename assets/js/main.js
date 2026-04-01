@@ -37,11 +37,7 @@ function initHeroAnimations() {
 // =============================================
 function initTerminal() {
     const terminal = document.getElementById('terminal');
-    if (!terminal) return;
-
-    // // Torna o terminal visível e remove o deslocamento inicial
-    // terminal.style.opacity = '1';
-    // terminal.style.transform = 'translateY(0)';
+    if (!terminal) return; 
 
     const line1 = document.getElementById('line1');
     const cmdWhoami = document.getElementById('cmd-whoami');
