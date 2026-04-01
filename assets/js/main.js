@@ -142,54 +142,50 @@
 // });
 
 // ======================
-// Terminal Bash Realista - Typewriter Sequencial
+// TERMINAL BASH REALISTA - Sequencial
 // ======================
 function startTypewriter() {
     const terminal = document.getElementById('terminal');
     if (!terminal) return;
 
-    // Textos
-    const cmdWhoami = "whoami";
-    const outputWhoami = "Network Engineer → Python Developer → NetDevOps Practitioner";
-
-    const cmdCert = "cat certifications.txt";
-    const outputCert = "CCNA Routing & Switching | CCNA DevNet";
-
     // Elementos
-    const cmd1El = document.getElementById('cmd1');
-    const output1El = document.getElementById('output1');
-    const cmd2El = document.getElementById('cmd2');
-    const output2El = document.getElementById('output2');
-    const cmd3El = document.getElementById('cmd3');
+    const cmdWhoami = document.getElementById('cmd-whoami');
+    const outputWhoami = document.getElementById('output-whoami');
+    const cmdCert = document.getElementById('cmd-cert');
+    const outputCert = document.getElementById('output-cert');
+    const finalCursor = document.getElementById('final-cursor');
+
+    const textWhoami = "whoami";
+    const resultWhoami = "Network Engineer → Python Developer → NetDevOps Practitioner";
+
+    const textCert = "cat certifications.txt";
+    const resultCert = "CCNA Routing & Switching | CCNA DevNet";
 
     let delay = 0;
 
-    // Passo 1: Aparece primeira linha (prompt + comando whoami)
+    // 1. Digita primeiro comando: whoami
     setTimeout(() => {
-        typeText(cmd1El, cmdWhoami, 40, () => {
-            // Depois de digitar o comando, mostra o output
+        typeText(cmdWhoami, textWhoami, 40, () => {
             setTimeout(() => {
-                output1El.textContent = outputWhoami;
-                output1El.style.opacity = 1;
+                outputWhoami.textContent = resultWhoami;
+                outputWhoami.style.opacity = "1";
             }, 300);
         });
-    }, delay += 800);
+    }, delay += 600);
 
-    // Passo 2: Segunda linha (prompt + cat certifications.txt)
+    // 2. Digita segundo comando: cat certifications.txt
     setTimeout(() => {
-        typeText(cmd2El, cmdCert, 35, () => {
+        typeText(cmdCert, textCert, 38, () => {
             setTimeout(() => {
-                output2El.textContent = outputCert;
-                output2El.style.opacity = 1;
-            }, 400);
+                outputCert.textContent = resultCert;
+                outputCert.style.opacity = "1";
+            }, 350);
         });
-    }, delay += 1600);
+    }, delay += 1800);
 
-    // Passo 3: Terceira linha (prompt final com cursor piscando)
+    // 3. Mostra prompt final com cursor piscando
     setTimeout(() => {
-        cmd3El.textContent = "";
-        cmd3El.classList.add('cursor');
-        cmd3El.style.animation = "blink 1s step-end infinite";
+        finalCursor.style.animation = "blink 1s step-end infinite";
     }, delay += 1400);
 }
 
@@ -198,14 +194,13 @@ function typeText(element, text, speed, callback) {
     let i = 0;
     element.textContent = "";
 
-    function type() {
+    const interval = setInterval(() => {
         if (i < text.length) {
             element.textContent += text.charAt(i);
             i++;
-            setTimeout(type, speed);
-        } else if (callback) {
-            callback();
+        } else {
+            clearInterval(interval);
+            if (callback) callback();
         }
-    }
-    type();
+    }, speed);
 }
