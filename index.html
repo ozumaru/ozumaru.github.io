@@ -83,7 +83,7 @@
     </div>
 
     <!-- TERMINAL - vai aparecer depois -->
-    <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(20px);">
+    <!-- <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(20px);">
       <div><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> whoami</div>
       <div class="out" id="whoami-output"></div>
       
@@ -91,7 +91,18 @@
       <div class="out" id="cert-output"></div>
       
       <div><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> <span class="cursor" id="cursor">█</span></div>
+    </div> -->
+    
+    <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(30px);">
+      <div id="line1"><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> <span id="cmd1"></span></div>
+      <div id="output1" class="out"></div>
+      
+      <div id="line2"><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> <span id="cmd2"></span></div>
+      <div id="output2" class="out"></div>
+      
+      <div id="line3"><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> <span id="cmd3" class="cursor">█</span></div>
     </div>
+
 
   </div>
 </div>
