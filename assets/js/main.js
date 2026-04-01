@@ -1,31 +1,3 @@
-// // Intersection Observer for fade-in
-// const observer = new IntersectionObserver((entries) => {
-// entries.forEach(e => {
-//     if (e.isIntersecting) {
-//     e.target.classList.add('visible');
-//     observer.unobserve(e.target);
-//     }
-// });
-// }, { threshold: 0.15 });
-
-// document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-// // Nav active state
-// const sections = document.querySelectorAll('section[id]');
-// const navLinks = document.querySelectorAll('.nav-links a');
-
-// window.addEventListener('scroll', () => {
-// let current = '';
-// sections.forEach(s => {
-//     if (window.scrollY >= s.offsetTop - 200) current = s.getAttribute('id');
-// });
-// navLinks.forEach(a => {
-//     a.style.color = a.getAttribute('href') === '#' + current
-//     ? 'var(--cyan)' : '';
-// });
-// });
-
-
 // =============================================
 // main.js - Ozumaru Portfolio
 // =============================================
@@ -61,18 +33,68 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2800);
 });
 
-// ======================
-// TERMINAL BASH REALISTA - Sequencial
-// ======================
+// // ======================
+// // TERMINAL BASH REALISTA - Sequencial
+// // ======================
+// function startTypewriter() {
+//     const terminal = document.getElementById('terminal');
+//     if (!terminal) return;
+
+//     // Elementos
+//     const cmdWhoami = document.getElementById('cmd-whoami');
+//     const outputWhoami = document.getElementById('output-whoami');
+//     const cmdCert = document.getElementById('cmd-cert');
+//     const outputCert = document.getElementById('output-cert');
+//     const finalCursor = document.getElementById('final-cursor');
+
+//     const textWhoami = "whoami";
+//     const resultWhoami = "Network Engineer → Python Developer → NetDevOps Practitioner";
+
+//     const textCert = "cat certifications.txt";
+//     const resultCert = "CCNA Routing & Switching | CCNA DevNet";
+
+//     let delay = 0;
+
+//     // 1. Digita primeiro comando: whoami
+//     setTimeout(() => {
+//         typeText(cmdWhoami, textWhoami, 40, () => {
+//             setTimeout(() => {
+//                 outputWhoami.textContent = resultWhoami;
+//                 outputWhoami.style.opacity = "1";
+//             }, 300);
+//         });
+//     }, delay += 600);
+
+//     // 2. Digita segundo comando: cat certifications.txt
+//     setTimeout(() => {
+//         typeText(cmdCert, textCert, 38, () => {
+//             setTimeout(() => {
+//                 outputCert.textContent = resultCert;
+//                 outputCert.style.opacity = "1";
+//             }, 350);
+//         });
+//     }, delay += 1800);
+
+//     // 3. Mostra prompt final com cursor piscando
+//     setTimeout(() => {
+//         finalCursor.style.animation = "blink 1s step-end infinite";
+//     }, delay += 1400);
+
+// }
 function startTypewriter() {
     const terminal = document.getElementById('terminal');
     if (!terminal) return;
 
     // Elementos
+    const line1 = document.getElementById('line1');
     const cmdWhoami = document.getElementById('cmd-whoami');
     const outputWhoami = document.getElementById('output-whoami');
+
+    const line2 = document.getElementById('line2');
     const cmdCert = document.getElementById('cmd-cert');
     const outputCert = document.getElementById('output-cert');
+
+    const line3 = document.getElementById('line3');
     const finalCursor = document.getElementById('final-cursor');
 
     const textWhoami = "whoami";
@@ -83,32 +105,44 @@ function startTypewriter() {
 
     let delay = 0;
 
-    // 1. Digita primeiro comando: whoami
+    // 1. Mostra primeira linha + digita whoami
     setTimeout(() => {
-        typeText(cmdWhoami, textWhoami, 40, () => {
+        line1.style.transition = "opacity 0.4s ease";
+        line1.style.opacity = "1";
+
+        typeText(cmdWhoami, textWhoami, 45, () => {
             setTimeout(() => {
                 outputWhoami.textContent = resultWhoami;
+                outputWhoami.style.transition = "opacity 0.5s ease";
                 outputWhoami.style.opacity = "1";
-            }, 300);
+            }, 400);
         });
     }, delay += 600);
 
-    // 2. Digita segundo comando: cat certifications.txt
+    // 2. Mostra segunda linha + digita cat certifications.txt
     setTimeout(() => {
-        typeText(cmdCert, textCert, 38, () => {
+        line2.style.transition = "opacity 0.4s ease";
+        line2.style.opacity = "1";
+
+        typeText(cmdCert, textCert, 40, () => {
             setTimeout(() => {
                 outputCert.textContent = resultCert;
+                outputCert.style.transition = "opacity 0.5s ease";
                 outputCert.style.opacity = "1";
-            }, 350);
+            }, 450);
         });
-    }, delay += 1800);
+    }, delay += 2200);
 
-    // 3. Mostra prompt final com cursor piscando
+    // 3. Mostra terceira linha com cursor piscando
     setTimeout(() => {
+        line3.style.transition = "opacity 0.5s ease";
+        line3.style.opacity = "1";
+        
         finalCursor.style.animation = "blink 1s step-end infinite";
-    }, delay += 1400);
-
+    }, delay += 1800);
 }
+
+
 
 // ======================
 // Intersection Observer (para fade-in das seções)
@@ -166,4 +200,4 @@ function typeText(element, text, speed, callback) {
             if (callback) callback();
         }
     }, speed);
-}
+} 

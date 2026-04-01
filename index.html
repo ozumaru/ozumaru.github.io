@@ -93,7 +93,7 @@
       <div><span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> <span class="cursor" id="cursor">█</span></div>
     </div> -->
 
-    <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out;">
+    <!-- <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out;">
       <div class="terminal-line" id="line1">
         <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
         <span class="cmd-text" id="cmd-whoami"></span>
@@ -107,6 +107,30 @@
       <div class="out" id="output-cert"></div>
 
       <div class="terminal-line" id="line3">
+        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
+        <span class="cursor" id="final-cursor">█</span>
+      </div>
+    </div> -->
+
+    <!-- TERMINAL BASH - Versão Sequencial Realista -->
+    <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out;">
+      
+      <!-- Linha 1 -->
+      <div class="terminal-line" id="line1" style="opacity: 0;">
+        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
+        <span class="cmd-text" id="cmd-whoami"></span>
+      </div>
+      <div class="out" id="output-whoami" style="opacity: 0;"></div>
+
+      <!-- Linha 2 -->
+      <div class="terminal-line" id="line2" style="opacity: 0;">
+        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
+        <span class="cmd-text" id="cmd-cert"></span>
+      </div>
+      <div class="out" id="output-cert" style="opacity: 0;"></div>
+
+      <!-- Linha 3 (final) -->
+      <div class="terminal-line" id="line3" style="opacity: 0;">
         <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
         <span class="cursor" id="final-cursor">█</span>
       </div>
