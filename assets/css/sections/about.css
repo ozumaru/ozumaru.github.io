@@ -1,0 +1,81 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.about-text p {
+    color: var(--text);
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+.about-text p strong { color: var(--cyan); }
+
+.about-quote {
+    border-left: 3px solid var(--cyan);
+    padding: 20px 24px;
+    background: var(--surface);
+    margin-top: 32px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.82rem;
+    color: var(--text2);
+    line-height: 1.7;
+    position: relative;
+}
+.about-quote::before {
+    content: '> SOLO LEVELING MODE';
+    display: block;
+    color: var(--orange);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--green));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+.stat-card:hover {
+    border-color: var(--cyan);
+    box-shadow: var(--glow);
+}
+.stat-card:hover::before {
+    transform: scaleX(1);
+}
+.stat-num {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--cyan);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+.stat-label {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text2);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

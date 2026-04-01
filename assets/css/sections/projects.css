@@ -1,0 +1,78 @@
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.project-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: block;
+}
+.project-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), var(--green));
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    border-color: rgba(0,212,255,0.4);
+    box-shadow: 0 8px 40px rgba(0,212,255,0.12);
+    transform: translateY(-4px);
+}
+.project-card:hover::after {
+    transform: scaleX(1);
+}
+.project-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.project-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.project-desc {
+    font-size: 0.9rem;
+    color: var(--text2);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tech-badge {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border: 1px solid var(--border);
+    color: var(--cyan);
+    letter-spacing: 1px;
+}
+.project-arrow {
+    position: absolute;
+    top: 32px; right: 32px;
+    color: var(--text2);
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+.project-card:hover .project-arrow {
+    color: var(--cyan);
+    transform: translate(4px, -4px);
+}

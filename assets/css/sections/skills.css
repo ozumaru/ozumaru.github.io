@@ -1,0 +1,44 @@
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.skill-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px;
+    transition: all 0.3s;
+}
+.skill-group:hover {
+    border-color: var(--cyan);
+    box-shadow: var(--glow);
+    transform: translateY(-4px);
+}
+.skill-group-title {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--green);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+.skill-item::before {
+    content: '▸';
+    color: var(--cyan);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}

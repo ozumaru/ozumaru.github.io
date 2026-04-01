@@ -1,0 +1,21 @@
+.terminal {
+    font-family: 'Share Tech Mono', monospace;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    font-size: 0.8rem;
+    line-height: 2;
+    color: var(--text2);
+    margin-top: 48px;
+}
+.terminal .prompt { color: var(--green); }
+.terminal .cmd { color: var(--cyan); }
+.terminal .out { color: var(--text); }
+.terminal .cursor {
+    display: inline-block;
+    width: 8px;
+    height: 14px;
+    background: var(--green);
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}

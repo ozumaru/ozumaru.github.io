@@ -1,0 +1,35 @@
+.btn {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 14px 28px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: all 0.25s;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--cyan);
+    color: #050a0f;
+    font-weight: 700;
+    border: 2px solid var(--cyan);
+}
+.btn-primary:hover {
+    background: transparent;
+    color: var(--cyan);
+    box-shadow: var(--glow);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--cyan);
+    border: 2px solid var(--border);
+}
+.btn-outline:hover {
+    border-color: var(--cyan);
+    box-shadow: var(--glow);
+}

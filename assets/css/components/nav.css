@@ -1,0 +1,50 @@
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5,10,15,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    color: var(--cyan);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+.nav-logo span { color: var(--green); }
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+.nav-links a {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--text2);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    position: relative;
+}
+.nav-links a::before {
+    content: '//';
+    color: var(--cyan);
+    margin-right: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.nav-links a:hover {
+    color: var(--cyan);
+}
+.nav-links a:hover::before {
+    opacity: 1;
+}
