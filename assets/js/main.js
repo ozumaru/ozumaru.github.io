@@ -226,7 +226,8 @@ function startTerminalLines() {
     const textCert = "cat certifications.txt";
     const resultCert = "CCNA Routing & Switching | CCNA DevNet";
 
-    let delay = 600;
+    let delay = 300;
+    // let delay = 600;
 
     // 1. Primeira linha
     setTimeout(() => {
