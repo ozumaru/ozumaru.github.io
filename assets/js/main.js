@@ -30,36 +30,36 @@
 // // main.js - Ozumaru Portfolio
 // // =============================================
 
-// // Animações de entrada do Hero + Terminal Typewriter
-// document.addEventListener("DOMContentLoaded", () => {
+// Animações de entrada do Hero + Terminal Typewriter
+document.addEventListener("DOMContentLoaded", () => {
 
-//     // Elementos do Hero
-//     const heroTag = document.getElementById('hero-tag');
-//     const heroName = document.getElementById('hero-name');
-//     const heroTitle = document.getElementById('hero-title');
-//     const heroDesc = document.getElementById('hero-desc');
-//     const heroBtns = document.getElementById('hero-btns');
-//     const terminal = document.getElementById('terminal');
+    // Elementos do Hero
+    const heroTag = document.getElementById('hero-tag');
+    const heroName = document.getElementById('hero-name');
+    const heroTitle = document.getElementById('hero-title');
+    const heroDesc = document.getElementById('hero-desc');
+    const heroBtns = document.getElementById('hero-btns');
+    const terminal = document.getElementById('terminal');
 
-//     if (!heroTag) return; // Proteção caso esteja em outra página
+    if (!heroTag) return; // Proteção caso esteja em outra página
 
-//     // Sequência de animações
-//     setTimeout(() => { heroTag.style.opacity = 1; }, 400);
-//     setTimeout(() => { heroName.style.opacity = 1; }, 800);
-//     setTimeout(() => { heroTitle.style.opacity = 1; }, 1200);
-//     setTimeout(() => { heroDesc.style.opacity = 1; }, 1600);
-//     setTimeout(() => { heroBtns.style.opacity = 1; }, 2000);
+    // Sequência de animações
+    setTimeout(() => { heroTag.style.opacity = 1; }, 400);
+    setTimeout(() => { heroName.style.opacity = 1; }, 800);
+    setTimeout(() => { heroTitle.style.opacity = 1; }, 1200);
+    setTimeout(() => { heroDesc.style.opacity = 1; }, 1600);
+    setTimeout(() => { heroBtns.style.opacity = 1; }, 2000);
 
-//     // Terminal aparece depois
-//     setTimeout(() => {
-//         terminal.style.transition = "all 0.8s ease-out";
-//         terminal.style.opacity = 1;
-//         terminal.style.transform = "translateY(0)";
+    // Terminal aparece depois
+    setTimeout(() => {
+        terminal.style.transition = "all 0.8s ease-out";
+        terminal.style.opacity = 1;
+        terminal.style.transform = "translateY(0)";
 
-//         // Inicia o efeito de digitação
-//         startTypewriter();
-//     }, 2800);
-// });
+        // Inicia o efeito de digitação
+        startTypewriter();
+    }, 2800);
+});
 
 // // ======================
 // // Typewriter Effect
@@ -189,15 +189,6 @@ function startTypewriter() {
     }, delay += 1400);
 
 }
-
-// Terminal aparece depois do hero
-setTimeout(() => {
-    terminal.style.transition = "all 0.8s ease-out";
-    terminal.style.opacity = 1;
-    terminal.style.transform = "translateY(0)";
-
-    startTypewriter();     // ← Chama a nova função
-}, 2800);   // você pode ajustar esse tempo (2800 = 2.8 segundos)  
 
 // Função auxiliar para digitar texto letra por letra
 function typeText(element, text, speed, callback) {
