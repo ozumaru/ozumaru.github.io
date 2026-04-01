@@ -93,6 +93,7 @@ position: relative;
 min-height: 100vh;
 display: flex;
 align-items: center;
+justify-content: center;
 position: relative;
 padding: 120px 40px 80px;
 z-index: 1;
@@ -145,6 +146,7 @@ line-height: 1.8;
 
 .hero-btns {
 display: flex;
+justify-content: center;
 gap: 16px;
 flex-wrap: wrap;
 opacity: 0;
