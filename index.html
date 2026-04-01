@@ -151,7 +151,104 @@
 <div class="divider"></div>
 
 <!-- PROJECTS -->
+<!-- PROJETOS -->
 <section id="projects">
+  <div class="section-header fade-in">
+    <div class="section-tag">CÓDIGO</div>
+    <h2 class="section-title">Projetos em <span>Destaque</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="projects-grid fade-in" style="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 32px;">
+    
+    <!-- Projeto 1 -->
+    <a class="project-card" href="projects/cisco-devnet-python.html">
+      <div class="project-image">
+        <!-- Você pode colocar screenshot aqui depois -->
+        <div style="background: linear-gradient(45deg, #00d4ff, #00ff88); height: 220px; display: flex; align-items: center; justify-content: center; color: #050a0f; font-size: 1.1rem; font-weight: 700;">
+          Cisco Automation
+        </div>
+      </div>
+      <div class="project-content">
+        <div class="project-tag">// PYTHON • NETMIKO</div>
+        <div class="project-title">CiscoDevNet — Python</div>
+        <p class="project-desc">
+          Ferramentas completas de automação para redes Cisco. Do acesso SSH básico até scripts avançados de coleta e configuração.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Netmiko</span>
+          <span class="tech-badge">Cisco IOS</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Projeto 2 -->
+    <a class="project-card" href="projects/automation-projects-one.html">
+      <div class="project-image">
+        <div style="background: linear-gradient(45deg, #ff6b2b, #00d4ff); height: 220px; display: flex; align-items: center; justify-content: center; color: #050a0f; font-size: 1.1rem; font-weight: 700;">
+          Refatoração + POO
+        </div>
+      </div>
+      <div class="project-content">
+        <div class="project-tag">// REFACTORING • BEST PRACTICES</div>
+        <div class="project-title">CiscoDevNet — Mini Projeto</div>
+        <p class="project-desc">
+          Backup automático, relatório de interfaces em JSON e criação de VLANs em massa com forte foco em código limpo e Programação Orientada a Objetos.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Netmiko</span>
+          <span class="tech-badge">POO</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Projeto 3 - NetBox -->
+    <a class="project-card" href="projects/netbox-inventory-sync.html">
+      <div class="project-image">
+        <div style="background: linear-gradient(45deg, #00ff88, #ff6b2b); height: 220px; display: flex; align-items: center; justify-content: center; color: #050a0f; font-size: 1.1rem; font-weight: 700;">
+          NetBox Sync
+        </div>
+      </div>
+      <div class="project-content">
+        <div class="project-tag">// NETBOX • API • INTERNO</div>
+        <div class="project-title">NetBox Inventory Sync</div>
+        <p class="project-desc">
+          Motor de reconciliação automática que mantém o inventário do NetBox sempre consistente com a fonte CSV, com validações hierárquicas completas.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">NetBox API</span>
+          <span class="tech-badge">Pandas</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- Projeto 4 -->
+    <a class="project-card" href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank">
+      <div class="project-image">
+        <div style="background: #0a1628; height: 220px; display: flex; align-items: center; justify-content: center; color: var(--cyan); font-size: 2.5rem;">
+          ⌘
+        </div>
+      </div>
+      <div class="project-content">
+        <div class="project-tag">// PRODUCTIVITY</div>
+        <div class="project-title">Ozumaru Sublime Text</div>
+        <p class="project-desc">
+          Configurações, atalhos e snippets otimizados para Network Engineers que vivem entre Python e automação de redes.
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">Sublime Text</span>
+          <span class="tech-badge">Workflow</span>
+        </div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- <section id="projects">
   <div class="section-header fade-in">
     <div class="section-tag">CÓDIGO</div>
     <h2 class="section-title">Projetos em <span>Destaque</span></h2>
@@ -160,7 +257,6 @@
 
   <div class="projects-grid fade-in">
 
-    <!-- Projeto 1: CiscoDevNet - Primeiros Passos -->
     <a class="project-card" href="projects/cisco-devnet-python.html">
       <span class="project-arrow">↗</span>
       <div class="project-tag">// PYTHON • NETMIKO • BÁSICO</div>
@@ -176,7 +272,6 @@
       </div>
     </a>
 
-    <!-- Projeto 2: CiscoDevNet - Mini-Projeto com Refatoração (POO) -->
     <a class="project-card" href="projects/automation-projects-one.html">
       <span class="project-arrow">↗</span>
       <div class="project-tag">// PYTHON • NETMIKO • REFACTORING</div>
@@ -193,7 +288,6 @@
       </div>
     </a>
 
-    <!-- Projeto 3: NetBox Inventory Sync (Privado) -->
     <a class="project-card" href="projects/netbox-inventory-sync.html">
       <span class="project-arrow">↗</span>
       <div class="project-tag">// NETBOX • API • INTERNO</div>
@@ -210,7 +304,6 @@
       </div>
     </a>
 
-    <!-- Projeto 4: Sublime Text -->
     <a class="project-card" href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank">
       <span class="project-arrow">↗</span>
       <div class="project-tag">// PRODUTIVIDADE • CONFIG</div>
@@ -226,7 +319,7 @@
     </a>
 
   </div>
-</section>
+</section> -->
 <!-- PROJETOS -->
 
 <div class="divider"></div>
