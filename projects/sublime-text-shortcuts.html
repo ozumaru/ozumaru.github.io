@@ -1,105 +1,216 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozumaru Sublime Text | Atalhos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozumaru · Sublime Text Shortcuts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050a0f;
+            --bg2: #080f18;
+            --surface: #0a1628;
+            --surface2: #0d1f38;
+            --cyan: #00d4ff;
+            --cyan2: #00a8cc;
+            --green: #00ff88;
+            --orange: #ff6b2b;
+            --text: #c8e0f0;
+            --text2: #6a8fa8;
+            --border: rgba(0,212,255,0.15);
+            --glow: 0 0 20px rgba(0,212,255,0.3);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            padding: 80px 24px 60px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.4rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+        h1 span { color: var(--cyan); }
+        .sub {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--green);
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+            border-left: 3px solid var(--cyan);
+            padding-left: 16px;
+        }
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            margin: 48px 0 20px 0;
+            color: var(--cyan);
+            border-bottom: 1px dashed var(--border);
+            padding-bottom: 8px;
+        }
+        .shortcut-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+        .shortcut-table th {
+            font-family: 'Share Tech Mono', monospace;
+            text-align: left;
+            padding: 12px 16px;
+            background: rgba(0,212,255,0.08);
+            color: var(--green);
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+        }
+        .shortcut-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9rem;
+        }
+        .shortcut-table tr:last-child td {
+            border-bottom: none;
+        }
+        .shortcut-key {
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--cyan);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 48px;
+            font-family: 'Share Tech Mono', monospace;
+            color: var(--text2);
+            text-decoration: none;
+            border: 1px solid var(--border);
+            padding: 8px 20px;
+            transition: all 0.2s;
+        }
+        .back-link:hover {
+            color: var(--cyan);
+            border-color: var(--cyan);
+        }
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text2);
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+        }
+        @media (max-width: 700px) {
+            .shortcut-table th, .shortcut-table td {
+                padding: 8px 12px;
+                font-size: 0.8rem;
+            }
+            .shortcut-key {
+                white-space: normal;
+                word-break: break-word;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="grid-bg"></div>
+<div class="container">
+    <h1>Ozumaru <span>Sublime Text</span></h1>
+    <div class="sub">// Coleção de atalhos para engenheiros de rede e automação</div>
 
-  <nav>
-    <a class="nav-logo" href="../index.html"><span>//</span> OZUMARU</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../index.html#about">SOBRE</a></li>
-      <li><a href="../index.html#skills">SKILLS</a></li>
-      <li><a href="../index.html#projects">PROJETOS</a></li>
-      <li><a href="../index.html#certs">CERTS</a></li>
-      <li><a href="../index.html#contact">CONTATO</a></li>
-    </ul>
-  </nav>
+    <p style="margin-bottom: 24px; color: var(--text2);">
+        Atalhos que uso no dia a dia para Python, Ansible, configuração de dispositivos e edição de código.  
+        Organizados por categoria para facilitar a consulta.
+    </p>
 
-  <!-- HERO -->
-  <div class="hero" style="min-height: 60vh; padding-top: 140px;">
-    <div class="hero-content" style="max-width: 900px;">
-      <div class="hero-tag">// PRODUTIVIDADE • EDITOR</div>
-      <h1 class="hero-name">Ozumaru<br><span class="accent">Sublime Text</span></h1>
-      <div class="hero-title">Coleção de Atalhos e Configurações para Network Engineers</div>
-      <p class="hero-desc">
-        Atalhos que uso no dia a dia para trabalhar mais rápido com Python, automação de redes, 
-        configuração de dispositivos e edição de código.
-      </p>
-      <div class="hero-btns">
-        <a href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank" class="btn btn-primary">VER NO GITHUB</a>
-        <a href="../index.html#projects" class="btn btn-outline">← VOLTAR AOS PROJETOS</a>
-      </div>
-    </div>
-  </div>
+    <!-- ==================== EDIÇÃO BÁSICA ==================== -->
+    <div class="section-title">▸ Edição Básica</div>
+    <table class="shortcut-table">
+        <thead><tr><th>Atalho</th><th>O que faz</th></tr>
+        </thead>
+        <tbody>
+            <tr><td class="shortcut-key">CTRL + X</td><td>Recortar linha ou seleção</td></tr>
+            <tr><td class="shortcut-key">CTRL + C</td><td>Copiar</td></tr>
+            <tr><td class="shortcut-key">CTRL + V</td><td>Colar</td></tr>
+            <tr><td class="shortcut-key">CTRL + D</td><td>Duplicar linha (cursor solto) ou palavra (selecionada)</td></tr>
+            <tr><td class="shortcut-key">CTRL + Z</td><td>Desfazer</td></tr>
+            <tr><td class="shortcut-key">CTRL + SHIFT + Z</td><td>Refazer (retornar o que foi desfeito)</td></tr>
+            <tr><td class="shortcut-key">SHIFT + DELETE</td><td>Apagar linha inteira (sem seleção)</td></tr>
+        </tbody>
+    </table>
 
-  <div class="divider"></div>
+    <!-- ==================== BUSCA E SELEÇÃO MÚLTIPLA ==================== -->
+    <div class="section-title">▸ Busca, Seleção Múltipla e Cursores</div>
+    <table class="shortcut-table">
+        <thead><tr><th>Atalho</th><th>O que faz</th></tr></thead>
+        <tbody>
+            <tr><td class="shortcut-key">CTRL + F</td><td>Abrir busca no arquivo atual</td></tr>
+            <tr><td class="shortcut-key">ALT + F3 (ou FN+ALT+F3)</td><td>Seleciona todas as ocorrências da palavra sob o cursor</td></tr>
+            <tr><td class="shortcut-key">ALT + ENTER</td><td>Cria cursores em todas as ocorrências encontradas na busca</td></tr>
+            <tr><td class="shortcut-key">CTRL + Click Esquerdo</td><td>Cria cursores adicionais em pontos específicos (ou abre arquivos na Side Bar)</td></tr>
+            <tr><td class="shortcut-key">CTRL + ALT + Setas ↑/↓</td><td>Cria cursor na linha acima/abaixo</td></tr>
+            <tr><td class="shortcut-key">Scroll Lock (botão do meio)</td><td>Seleção vertical em bloco (modo coluna)</td></tr>
+        </tbody>
+    </table>
 
-  <section style="padding: 80px 40px; max-width: 1100px; margin: 0 auto;">
-    <div class="section-header fade-in">
-      <div class="section-tag">ATALHOS</div>
-      <h2 class="section-title">Meus Atalhos <span>Essenciais</span></h2>
-      <div class="section-line"></div>
-    </div>
+    <!-- ==================== SELEÇÃO E MOVIMENTAÇÃO ==================== -->
+    <div class="section-title">▸ Seleção e Movimentação Avançada</div>
+    <table class="shortcut-table">
+        <thead><tr><th>Atalho</th><th>O que faz</th></tr></thead>
+        <tbody>
+            <tr><td class="shortcut-key">SHIFT + Setas ←/→</td><td>Selecionar caractere a caractere</td></tr>
+            <tr><td class="shortcut-key">CTRL + SHIFT + Setas ←/→</td><td>Selecionar palavra inteira (pula palavras)</td></tr>
+            <tr><td class="shortcut-key">CTRL + SHIFT + Setas ↑/↓</td><td>Mover linha (ou bloco) para cima/baixo</td></tr>
+        </tbody>
+    </table>
 
-    <div class="about-text" style="max-width: 800px; margin-bottom: 60px;">
-      <p>
-        Esta é a minha coleção pessoal de atalhos do Sublime Text, acumulada ao longo dos anos trabalhando com 
-        Python, Ansible, configurações de rede e scripts de automação.
-      </p>
-      <p>
-        Eles foram organizados para facilitar o dia a dia de quem trabalha com código e infraestrutura.
-      </p>
-    </div>
+    <!-- ==================== SIDE BAR E INTERFACE ==================== -->
+    <div class="section-title">▸ Side Bar e Grupos</div>
+    <table class="shortcut-table">
+        <thead><tr><th>Atalho</th><th>O que faz</th></tr></thead>
+        <tbody>
+            <tr><td class="shortcut-key">CTRL + K + B</td><td>Alternar visibilidade da Side Bar</td></tr>
+            <tr><td class="shortcut-key">SHIFT + ALT + 1</td><td>Grupo único (voltar para única coluna)</td></tr>
+            <tr><td class="shortcut-key">SHIFT + ALT + 2</td><td>Dividir em 2 grupos laterais (colunas)</td></tr>
+            <tr><td class="shortcut-key">SHIFT + ALT + 3</td><td>Dividir em 3 grupos laterais</td></tr>
+            <tr><td class="shortcut-key">SHIFT + ALT + 4</td><td>Dividir em 4 grupos laterais</td></tr>
+        </tbody>
+    </table>
 
-    <!-- Aqui vão os atalhos organizados -->
-    <div class="terminal" style="margin-bottom: 60px;">
-      <h3 style="color: var(--green); margin-bottom: 20px;">📋 Atalhos Básicos de Edição</h3>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; font-family: 'Share Tech Mono', monospace;">
-        
-        <div>
-          <strong>CTRL + X</strong> — Recortar<br>
-          <strong>CTRL + C</strong> — Copiar<br>
-          <strong>CTRL + V</strong> — Colar<br>
-          <strong>CTRL + D</strong> — Duplicar linha ou palavra
-        </div>
-        
-        <div>
-          <strong>CTRL + Z</strong> — Desfazer<br>
-          <strong>CTRL + SHIFT + Z</strong> — Refazer<br>
-          <strong>CTRL + F</strong> — Procurar<br>
-          <strong>ALT + F3</strong> — Localizar e Selecionar todas as ocorrências
-        </div>
-      </div>
-    </div>
+    <!-- ==================== FORMATAÇÃO E ZOOM ==================== -->
+    <div class="section-title">▸ Formatação e Zoom</div>
+    <table class="shortcut-table">
+        <thead><tr><th>Atalho</th><th>O que faz</th></tr></thead>
+        <tbody>
+            <tr><td class="shortcut-key">CTRL + K + U</td><td>Transformar seleção em MAIÚSCULAS (Uppercase)</td></tr>
+            <tr><td class="shortcut-key">CTRL + K + L</td><td>Transformar seleção em minúsculas (Lowercase)</td></tr>
+            <tr><td class="shortcut-key">CTRL + Scroll (frente/trás)</td><td>Zoom in / Zoom out (aumenta/diminui fonte)</td></tr>
+        </tbody>
+    </table>
 
-    <!-- Mais seções virão aqui conforme você quiser expandir -->
+    <!-- ==================== DICAS EXTRAS ==================== -->
+    <div class="section-title">▸ Dicas de Produtividade</div>
+    <table class="shortcut-table">
+        <thead><tr><th>Dica</th><th>Descrição</th></tr></thead>
+        <tbody>
+            <tr><td class="shortcut-key">TAB</td><td>Auto-completar palavras já existentes no texto (usar setas para escolher)</td></tr>
+            <tr><td class="shortcut-key">Espaço vs. Tab</td><td>Espaço = caractere simples; Tab = avanço de célula (útil para dados tabulares)</td></tr>
+            <tr><td class="shortcut-key">CTRL + K + B + Click</td><td>Com Side Bar aberta, clique em arquivos com CTRL para abrir em nova guia</td></tr>
+        </tbody>
+    </table>
 
-    <div style="text-align: center; margin-top: 80px;">
-      <a href="https://github.com/ozumaru/Ozumaru-Sublime-Text/blob/main/Documents/Sublime%20Text%20-%20Atalhos.md" 
-         target="_blank" 
-         class="btn btn-primary">
-        VER LISTA COMPLETA NO GITHUB →
-      </a>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <footer>
-    <div class="footer-logo">// OZUMARU</div>
-    <div class="footer-copy">© 2025 · José Osmar Caitano · NetDevOps</div>
-    <a href="../index.html" style="color:var(--cyan);">← Voltar para Home</a>
-  </footer>
-
-  <script src="../assets/js/main.js"></script>
+    <a href="../index.html" class="back-link">⌂ VOLTAR AO PORTFÓLIO</a>
+</div>
+<footer>
+    <div>Ozumaru · Sublime Text Shortcuts · atualizado com atalhos do GitHub</div>
+</footer>
 </body>
 </html>
