@@ -1,0 +1,34 @@
+/* ============================================
+   Lang Toggle Button
+   ============================================ */
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.lang-toggle {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    color: var(--cyan);
+    background: transparent;
+    border: 1px solid var(--cyan);
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.lang-toggle:hover {
+    background: rgba(0, 212, 255, 0.08);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+.lang-toggle .lang-flag {
+    font-size: 0.9rem;
+}
