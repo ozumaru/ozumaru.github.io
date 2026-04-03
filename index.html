@@ -3,10 +3,153 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- =============================================
+     SEO & Open Graph Meta Tags
+     ============================================= -->
 <title>José Osmar Caitano | NetDevOps Engineer</title>
+<meta name="description" content="Network Infrastructure Analyst & NetDevOps Engineer em São Paulo. Automação de redes com Python, Ansible, Netmiko, FastAPI e NetBox. CCNA R&S + CCNA DevNet.">
+<meta name="keywords" content="NetDevOps, Network Automation, Python, Ansible, Netmiko, FastAPI, NetBox, CCNA, Cisco, São Paulo">
+<meta name="author" content="José Osmar Caitano">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ozumaru.github.io/">
+
+<!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ozumaru.github.io/">
+<meta property="og:title" content="José Osmar Caitano | NetDevOps Engineer">
+<meta property="og:description" content="Network Infrastructure Analyst & NetDevOps Engineer. Automação de redes com Python, Ansible, Netmiko, FastAPI e NetBox.">
+<meta property="og:image" content="https://ozumaru.github.io/assets/images/og-preview.png">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Ozumaru | NetDevOps">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://ozumaru.github.io/">
+<meta name="twitter:title" content="José Osmar Caitano | NetDevOps Engineer">
+<meta name="twitter:description" content="Network Infrastructure Analyst & NetDevOps Engineer. Automação de redes com Python, Ansible, Netmiko, FastAPI e NetBox.">
+<meta name="twitter:image" content="https://ozumaru.github.io/assets/images/og-preview.png">
+
+<!-- Favicon (SVG inline + fallbacks) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050a0f'/><text x='50%25' y='54%25' font-family='monospace' font-size='18' font-weight='900' fill='%2300d4ff' text-anchor='middle' dominant-baseline='middle'>O</text></svg>">
+<link rel="alternate icon" href="assets/images/favicon.ico">
+<meta name="theme-color" content="#050a0f">
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
+
+<!-- Mobile responsiveness extras (inline para não depender de arquivo externo) -->
+<style>
+/* =============================================
+   MOBILE IMPROVEMENTS — patch sobre responsive.css
+   ============================================= */
+
+/* Hamburger menu */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+    z-index: 200;
+}
+.nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cyan);
+    transition: all 0.3s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+    /* Nav mobile */
+    .nav-hamburger { display: flex; }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(5,10,15,0.97);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        z-index: 150;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+    }
+
+    /* Hero mobile */
+    .hero {
+        padding: 100px 20px 60px;
+        text-align: center;
+    }
+    .hero-content { padding: 0; }
+    .hero-desc { font-size: 0.95rem; margin: 0 auto 40px; }
+    .hero-btns {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-btns .btn { width: 100%; max-width: 280px; text-align: center; }
+
+    /* Terminal mobile */
+    .terminal {
+        font-size: 0.7rem;
+        padding: 14px 16px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    /* Seções mobile */
+    section > section {
+        padding: 60px 20px !important;
+    }
+
+    /* About quote mobile */
+    .about-quote {
+        font-size: 0.75rem;
+        padding: 16px;
+    }
+
+    /* Skills mobile — já coberto pelo responsive.css */
+
+    /* Projects mobile */
+    .project-card { padding: 24px 20px; }
+
+    /* Section header */
+    .section-title { font-size: clamp(1.6rem, 5vw, 2.5rem); }
+
+    /* Contact links */
+    .contact-link { padding: 16px; }
+}
+
+@media (max-width: 480px) {
+    /* Hero extra small */
+    .hero { padding: 90px 16px 50px; }
+    .about-stats { grid-template-columns: 1fr 1fr; gap: 10px; }
+    .stat-card { padding: 16px; }
+    .stat-num { font-size: 1.6rem; }
+
+    /* Certs */
+    .cert-card { padding: 20px 16px; gap: 12px; }
+    .cert-icon { font-size: 1.6rem; }
+
+    /* Botões hero menores */
+    .hero-btns .btn { font-size: 0.75rem; padding: 10px 20px; }
+}
+</style>
 
 </head>
 <body>
@@ -16,10 +159,14 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#"><span>//</span> OZUMARU</a>
-  <ul class="nav-links">
+  <!-- Hamburger button (mobile) -->
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#about">SOBRE</a></li>
     <li><a href="#skills">SKILLS</a></li>
-    <li><a href="#projects">PROJETOS</a></li> 
+    <li><a href="#projects">PROJETOS</a></li>
     <li><a href="#certs">CERTS</a></li>
     <li><a href="#contact">CONTATO</a></li>
   </ul>
@@ -28,20 +175,20 @@
 <!-- HERO -->
 <div class="hero">
   <div class="hero-orb"></div>
-  
+
   <div class="hero-content">
-    
+
     <!-- Tag -->
     <div class="hero-tag" id="hero-tag">⚡ NETDEVOPS ENGINEER · SÃO PAULO · BR</div>
-    
+
     <!-- Nome -->
     <h1 class="hero-name" id="hero-name">
       José Osmar<br><span class="accent">Caitano</span>
     </h1>
-    
+
     <!-- Título -->
     <div class="hero-title" id="hero-title">Infrastructure Analyst &amp; Network Automation</div>
-    
+
     <!-- Descrição -->
     <p class="hero-desc" id="hero-desc">
       Infraestrutura de redes encontra código. Construo ferramentas que automatizam<br>
@@ -51,30 +198,30 @@
     <!-- Botões -->
     <div class="hero-btns" id="hero-btns">
       <a href="#projects" class="btn btn-primary">▸ VER PROJETOS</a>
-      <a href="https://github.com/ozumaru" target="_blank" class="btn btn-outline">⌥ GITHUB</a>
-      <a href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank" class="btn btn-outline">▶ YOUTUBE</a>
+      <a href="https://github.com/ozumaru" target="_blank" rel="noopener" class="btn btn-outline">⌥ GITHUB</a>
+      <a href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank" rel="noopener" class="btn btn-outline">▶ YOUTUBE</a>
     </div>
 
-    <!-- TERMINAL BASH - Versão Corrigida -->
+    <!-- TERMINAL BASH -->
     <div class="terminal" id="terminal" style="opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out;">
-      
+
       <!-- Linha 1: whoami -->
       <div class="terminal-line" id="line1" style="opacity: 0;">
-        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
+        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span>
         <span class="cmd-text" id="cmd-whoami"></span>
       </div>
       <div class="out" id="output-whoami" style="opacity: 0;"></div>
 
       <!-- Linha 2: cat certifications.txt -->
       <div class="terminal-line" id="line2" style="opacity: 0;">
-        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
+        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span>
         <span class="cmd-text" id="cmd-cert"></span>
       </div>
       <div class="out" id="output-cert" style="opacity: 0;"></div>
 
       <!-- Linha 3: Prompt final -->
       <div class="terminal-line" id="line3" style="opacity: 0;">
-        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span> 
+        <span class="prompt">ozumaru@netdevops</span>:<span class="cmd">~$</span>
         <span class="cursor" id="final-cursor">█</span>
       </div>
     </div>
@@ -95,21 +242,21 @@
   <div class="about-grid fade-in">
     <div class="about-text">
       <p>
-        Desde <strong>2017</strong> trabalhando com infraestrutura de redes — e em constante 
-        evolução no mundo da <strong>automação e programação</strong>. Aprendi Python 
+        Desde <strong>2017</strong> trabalhando com infraestrutura de redes — e em constante
+        evolução no mundo da <strong>automação e programação</strong>. Aprendi Python
         para resolver problemas reais do dia a dia e agora compartilho essa jornada.
       </p>
       <p>
-        Meu foco é o universo <strong>NetDevOps</strong>: unir o conhecimento de redes 
-        com desenvolvimento de software para criar soluções que escalam. Ansible, Netmiko, 
+        Meu foco é o universo <strong>NetDevOps</strong>: unir o conhecimento de redes
+        com desenvolvimento de software para criar soluções que escalam. Ansible, Netmiko,
         FastAPI, NetBox — ferramentas que uso no trabalho todo dia.
       </p>
       <p>
-        Além dos projetos, mantenho um <strong>canal no YouTube</strong> onde compartilho 
+        Além dos projetos, mantenho um <strong>canal no YouTube</strong> onde compartilho
         conteúdo técnico sobre automação de redes — porque o melhor jeito de aprender é ensinando.
       </p>
       <div class="about-quote">
-        "Eu renasço a cada desafio. O mundo pode tentar me derrubar, mas toda queda 
+        "Eu renasço a cada desafio. O mundo pode tentar me derrubar, mas toda queda
         é apenas o momento em que desperto um novo poder. Eu não caminho… eu avanço."
         <br><br>— inspirado em Sung Jin-Woo, Shadow Monarch
       </div>
@@ -197,7 +344,7 @@
       <div class="project-tag">// PYTHON • NETMIKO • BÁSICO</div>
       <div class="project-title">CiscoDevNet — Python</div>
       <p class="project-desc">
-        Ferramentas completas de automação Cisco com Python + Netmiko. 
+        Ferramentas completas de automação Cisco com Python + Netmiko.
         Do básico (SSH, comandos simples) até coleta de CDP e exportação em CSV.
       </p>
       <div class="project-tech">
@@ -212,7 +359,7 @@
       <div class="project-tag">// PYTHON • NETMIKO • REFACTORING</div>
       <div class="project-title">CiscoDevNet — Mini Projeto</div>
       <p class="project-desc">
-        Backup automático, relatório de interfaces em JSON e criação de VLANs em massa. 
+        Backup automático, relatório de interfaces em JSON e criação de VLANs em massa.
         Forte ênfase em refatoração e boas práticas de código (POO).
       </p>
       <div class="project-tech">
@@ -228,7 +375,7 @@
       <div class="project-tag">// NETBOX • API • INTERNO</div>
       <div class="project-title">NetBox Inventory Sync</div>
       <p class="project-desc">
-        Motor de reconciliação automática de inventário. Sincroniza CSV ↔ NetBox com validações 
+        Motor de reconciliação automática de inventário. Sincroniza CSV ↔ NetBox com validações
         hierárquicas completas (Manufacturers, Roles, Models, Sites, Devices, MGMT IP, etc).
       </p>
       <div class="project-tech">
@@ -244,7 +391,7 @@
       <div class="project-tag">// PRODUTIVIDADE • CONFIG</div>
       <div class="project-title">Ozumaru Sublime Text</div>
       <p class="project-desc">
-        Coleção de atalhos, snippets e configurações otimizadas para quem trabalha com Python 
+        Coleção de atalhos, snippets e configurações otimizadas para quem trabalha com Python
         e automação de redes.
       </p>
       <div class="project-tech">
@@ -299,12 +446,12 @@
     <div class="contact-text">
       <h3>Bora trocar ideia sobre NetDevOps?</h3>
       <p>
-        Seja para colaborar em projetos, tirar dúvidas sobre automação de redes 
+        Seja para colaborar em projetos, tirar dúvidas sobre automação de redes
         ou simplesmente conectar com alguém da mesma área — estou por aqui.
       </p>
     </div>
     <div class="contact-links">
-      <a class="contact-link" href="https://github.com/ozumaru" target="_blank">
+      <a class="contact-link" href="https://github.com/ozumaru" target="_blank" rel="noopener">
         <div class="contact-link-icon">⌥</div>
         <div class="contact-link-info">
           <div class="contact-link-label">GITHUB</div>
@@ -312,7 +459,7 @@
         </div>
         <span>↗</span>
       </a>
-      <a class="contact-link" href="https://www.linkedin.com/in/jose-osmar-caitano/" target="_blank">
+      <a class="contact-link" href="https://www.linkedin.com/in/jose-osmar-caitano/" target="_blank" rel="noopener">
         <div class="contact-link-icon">💼</div>
         <div class="contact-link-info">
           <div class="contact-link-label">LINKEDIN</div>
@@ -320,7 +467,7 @@
         </div>
         <span>↗</span>
       </a>
-      <a class="contact-link" href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank">
+      <a class="contact-link" href="https://www.youtube.com/@NetDevOps_Ozumaru" target="_blank" rel="noopener">
         <div class="contact-link-icon">▶</div>
         <div class="contact-link-info">
           <div class="contact-link-label">YOUTUBE</div>
@@ -332,12 +479,39 @@
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER — © corrigido para 2026 -->
 <footer>
   <div class="footer-logo">// OZUMARU</div>
-  <div class="footer-copy">© 2025 · José Osmar Caitano · São Paulo, BR · NetDevOps 🐦‍🔥</div>
+  <div class="footer-copy">© 2026 · José Osmar Caitano · São Paulo, BR · NetDevOps 🐦‍🔥</div>
 </footer>
 
 <script src="assets/js/main.js"></script>
+
+<!-- Hamburger menu script -->
+<script>
+(function() {
+  const btn = document.getElementById('nav-hamburger');
+  const links = document.getElementById('nav-links');
+  if (!btn || !links) return;
+
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Fecha ao clicar em um link
+  links.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
