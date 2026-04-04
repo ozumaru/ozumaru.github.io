@@ -35,7 +35,7 @@ const TRANSLATIONS = {
     "contact.h3":        "Want to talk about NetDevOps?",
     "contact.p":         "Whether to collaborate on projects, discuss network automation or simply connect with someone from the same field — I'm here.",
     "footer.copy":       "© 2026 · José Osmar Caitano · São Paulo, BR · NetDevOps 🐦‍🔥"
-  },
+  }, 
   pt: {
     "nav.about":         "SOBRE",
     "nav.skills":        "SKILLS",
