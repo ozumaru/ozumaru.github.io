@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozumaru Sublime Text | Atalhos</title>
+  <title>Ozumaru Sublime Text | Shortcuts</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050a0f'/><text x='50%25' y='54%25' font-family='monospace' font-size='18' font-weight='900' fill='%2300d4ff' text-anchor='middle' dominant-baseline='middle'>O</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -11,31 +12,40 @@
 <body>
   <div class="grid-bg"></div>
 
+  <!-- NAV -->
   <nav>
     <a class="nav-logo" href="../index.html"><span>//</span> OZUMARU</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../index.html#about">SOBRE</a></li>
-      <li><a href="../index.html#skills">SKILLS</a></li>
-      <li><a href="../index.html#projects">PROJETOS</a></li>
-      <li><a href="../index.html#certs">CERTS</a></li>
-      <li><a href="../index.html#contact">CONTATO</a></li>
+    <div class="nav-right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-flag">🇧🇷</span><span class="lang-label">PT</span>
+      </button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html"          data-i18n="nav.home">HOME</a></li>
+      <li><a href="../index.html#about"    data-i18n="nav.about">ABOUT</a></li>
+      <li><a href="../index.html#skills"   data-i18n="nav.skills">SKILLS</a></li>
+      <li><a href="../index.html#projects" data-i18n="nav.projects">PROJECTS</a></li>
+      <li><a href="../index.html#certs"    data-i18n="nav.certs">CERTS</a></li>
+      <li><a href="../index.html#contact"  data-i18n="nav.contact">CONTACT</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <div class="hero" style="min-height: 60vh; padding-top: 140px;">
     <div class="hero-content" style="max-width: 900px;">
-      <div class="hero-tag">// PRODUTIVIDADE • EDITOR</div>
+      <div class="hero-tag">// PRODUCTIVITY • EDITOR</div>
       <h1 class="hero-name">Ozumaru<br><span class="accent">Sublime Text</span></h1>
-      <div class="hero-title">Coleção de Atalhos e Configurações para Network Engineers</div>
-      <p class="hero-desc">
-        Atalhos que uso no dia a dia para trabalhar mais rápido com Python, automação de redes, 
-        configuração de dispositivos e edição de código.
+      <div class="hero-title" data-i18n="sts.hero.title">Collection of Shortcuts and Settings for Network Engineers</div>
+      <p class="hero-desc" data-i18n="sts.hero.desc">
+        Shortcuts I use daily to work faster with Python, network automation,
+        device configuration and code editing.
       </p>
       <div class="hero-btns">
-        <a href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank" class="btn btn-primary">VER NO GITHUB</a>
-        <a href="../index.html#projects" class="btn btn-outline">← VOLTAR AOS PROJETOS</a>
+        <a href="https://github.com/ozumaru/Ozumaru-Sublime-Text" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="sts.hero.btn">VIEW ON GITHUB</a>
+        <a href="../index.html#projects" class="btn btn-outline" data-i18n="sts.hero.back">← BACK TO PROJECTS</a>
       </div>
     </div>
   </div>
@@ -44,125 +54,139 @@
 
   <section style="padding: 80px 40px; max-width: 1100px; margin: 0 auto;">
     <div class="section-header fade-in">
-      <div class="section-tag">ATALHOS</div>
-      <h2 class="section-title">Meus Atalhos <span>Essenciais</span></h2>
+      <div class="section-tag" data-i18n="sts.section.tag">SHORTCUTS</div>
+      <h2 class="section-title" data-i18n="sts.section.title">My Essential <span>Shortcuts</span></h2>
       <div class="section-line"></div>
     </div>
 
     <div class="about-text" style="max-width: 800px; margin-bottom: 60px;">
-      <p>
-        Esta é a minha coleção pessoal de atalhos do Sublime Text, acumulada ao longo dos anos trabalhando com 
-        Python, Ansible, configurações de rede e scripts de automação.
-      </p>
-      <p>
-        Eles foram organizados para facilitar o dia a dia de quem trabalha com código e infraestrutura.
-      </p>
+      <p data-i18n="sts.p1">This is my personal collection of Sublime Text shortcuts, accumulated over the years working with Python, Ansible, network configurations and automation scripts.</p>
+      <p data-i18n="sts.p2">They were organized to make daily life easier for those who work with code and infrastructure.</p>
     </div>
 
-    <!-- ==================== EDIÇÃO BÁSICA ==================== -->
+    <!-- BASIC EDITING -->
     <div class="shortcut-section">
-      <h3>📋 Edição Básica</h3>
+      <h3 data-i18n="sts.basic.title">📋 Basic Editing</h3>
       <table class="shortcut-table">
         <thead>
-          <tr><th>Atalho</th><th>O que faz</th>  </tr>
+          <tr>
+            <th data-i18n="sts.col.shortcut">Shortcut</th>
+            <th data-i18n="sts.col.action">What it does</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td class="shortcut-key">CTRL + X</td><td>Recortar linha ou seleção</td> </tr>
-          <tr><td class="shortcut-key">CTRL + C</td><td>Copiar</td> </tr>
-          <tr><td class="shortcut-key">CTRL + V</td><td>Colar</td> </tr>
-          <tr><td class="shortcut-key">CTRL + D</td><td>Duplicar linha (cursor solto) ou palavra (selecionada)</td> </tr>
-          <tr><td class="shortcut-key">CTRL + Z</td><td>Desfazer</td> </tr>
-          <tr><td class="shortcut-key">CTRL + SHIFT + Z</td><td>Refazer (retornar o que foi desfeito)</td> </tr>
-          <tr><td class="shortcut-key">SHIFT + DELETE</td><td>Apagar linha inteira (sem seleção)</td> </tr>
+          <tr><td class="shortcut-key">CTRL + X</td><td data-i18n="sts.basic.1">Cut line or selection</td></tr>
+          <tr><td class="shortcut-key">CTRL + C</td><td data-i18n="sts.basic.2">Copy</td></tr>
+          <tr><td class="shortcut-key">CTRL + V</td><td data-i18n="sts.basic.3">Paste</td></tr>
+          <tr><td class="shortcut-key">CTRL + D</td><td data-i18n="sts.basic.4">Duplicate line (loose cursor) or word (selected)</td></tr>
+          <tr><td class="shortcut-key">CTRL + Z</td><td data-i18n="sts.basic.5">Undo</td></tr>
+          <tr><td class="shortcut-key">CTRL + SHIFT + Z</td><td data-i18n="sts.basic.6">Redo (restore what was undone)</td></tr>
+          <tr><td class="shortcut-key">SHIFT + DELETE</td><td data-i18n="sts.basic.7">Delete entire line (no selection needed)</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- ==================== BUSCA E SELEÇÃO MÚLTIPLA ==================== -->
+    <!-- SEARCH & MULTI-SELECTION -->
     <div class="shortcut-section">
-      <h3>🔍 Busca, Seleção Múltipla e Cursores</h3>
+      <h3 data-i18n="sts.search.title">🔍 Search, Multi-Selection and Cursors</h3>
       <table class="shortcut-table">
         <thead>
-          <tr><th>Atalho</th><th>O que faz</th> </tr>
+          <tr>
+            <th data-i18n="sts.col.shortcut">Shortcut</th>
+            <th data-i18n="sts.col.action">What it does</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td class="shortcut-key">CTRL + F</td><td>Abrir busca no arquivo atual</td> </tr>
-          <tr><td class="shortcut-key">ALT + F3 (ou FN+ALT+F3)</td><td>Seleciona todas as ocorrências da palavra sob o cursor</td> </tr>
-          <tr><td class="shortcut-key">ALT + ENTER</td><td>Cria cursores em todas as ocorrências encontradas na busca</td> </tr>
-          <tr><td class="shortcut-key">CTRL + Click Esquerdo</td><td>Cria cursores adicionais em pontos específicos (ou abre arquivos na Side Bar)</td> </tr>
-          <tr><td class="shortcut-key">CTRL + ALT + Setas ↑/↓</td><td>Cria cursor na linha acima/abaixo</td> </tr>
-          <tr><td class="shortcut-key">Scroll Lock (botão do meio)</td><td>Seleção vertical em bloco (modo coluna)</td> </tr>
+          <tr><td class="shortcut-key">CTRL + F</td><td data-i18n="sts.search.1">Open search in current file</td></tr>
+          <tr><td class="shortcut-key">ALT + F3 (ou FN+ALT+F3)</td><td data-i18n="sts.search.2">Select all occurrences of the word under cursor</td></tr>
+          <tr><td class="shortcut-key">ALT + ENTER</td><td data-i18n="sts.search.3">Create cursors at all occurrences found in search</td></tr>
+          <tr><td class="shortcut-key">CTRL + Click Esquerdo</td><td data-i18n="sts.search.4">Create additional cursors at specific points (or open files in Side Bar)</td></tr>
+          <tr><td class="shortcut-key">CTRL + ALT + Setas ↑/↓</td><td data-i18n="sts.search.5">Create cursor in line above/below</td></tr>
+          <tr><td class="shortcut-key">Scroll Lock (botão do meio)</td><td data-i18n="sts.search.6">Vertical block selection (column mode)</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- ==================== SELEÇÃO E MOVIMENTAÇÃO AVANÇADA ==================== -->
+    <!-- ADVANCED NAVIGATION -->
     <div class="shortcut-section">
-      <h3>🎯 Seleção e Movimentação Avançada</h3>
+      <h3 data-i18n="sts.nav.title">🎯 Advanced Selection and Navigation</h3>
       <table class="shortcut-table">
         <thead>
-          <tr><th>Atalho</th><th>O que faz</th> </tr>
+          <tr>
+            <th data-i18n="sts.col.shortcut">Shortcut</th>
+            <th data-i18n="sts.col.action">What it does</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td class="shortcut-key">SHIFT + Setas ←/→</td><td>Selecionar caractere a caractere</td> </tr>
-          <tr><td class="shortcut-key">CTRL + SHIFT + Setas ←/→</td><td>Selecionar palavra inteira (pula palavras)</td> </tr>
-          <tr><td class="shortcut-key">CTRL + SHIFT + Setas ↑/↓</td><td>Mover linha (ou bloco) para cima/baixo</td> </tr>
+          <tr><td class="shortcut-key">SHIFT + Setas ←/→</td><td data-i18n="sts.nav.1">Select character by character</td></tr>
+          <tr><td class="shortcut-key">CTRL + SHIFT + Setas ←/→</td><td data-i18n="sts.nav.2">Select whole word (jumps words)</td></tr>
+          <tr><td class="shortcut-key">CTRL + SHIFT + Setas ↑/↓</td><td data-i18n="sts.nav.3">Move line (or block) up/down</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- ==================== SIDE BAR E GRUPOS ==================== -->
+    <!-- SIDEBAR -->
     <div class="shortcut-section">
-      <h3>📁 Side Bar e Grupos</h3>
+      <h3 data-i18n="sts.sidebar.title">📁 Side Bar and Groups</h3>
       <table class="shortcut-table">
         <thead>
-          <tr><th>Atalho</th><th>O que faz</th> </tr>
+          <tr>
+            <th data-i18n="sts.col.shortcut">Shortcut</th>
+            <th data-i18n="sts.col.action">What it does</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td class="shortcut-key">CTRL + K + B</td><td>Alternar visibilidade da Side Bar</td> </tr>
-          <tr><td class="shortcut-key">SHIFT + ALT + 1</td><td>Grupo único (voltar para única coluna)</td> </tr>
-          <tr><td class="shortcut-key">SHIFT + ALT + 2</td><td>Dividir em 2 grupos laterais (colunas)</td> </tr>
-          <tr><td class="shortcut-key">SHIFT + ALT + 3</td><td>Dividir em 3 grupos laterais</td> </tr>
-          <tr><td class="shortcut-key">SHIFT + ALT + 4</td><td>Dividir em 4 grupos laterais</td> </tr>
+          <tr><td class="shortcut-key">CTRL + K + B</td><td data-i18n="sts.sidebar.1">Toggle Side Bar visibility</td></tr>
+          <tr><td class="shortcut-key">SHIFT + ALT + 1</td><td data-i18n="sts.sidebar.2">Single group (back to single column)</td></tr>
+          <tr><td class="shortcut-key">SHIFT + ALT + 2</td><td data-i18n="sts.sidebar.3">Split into 2 side groups (columns)</td></tr>
+          <tr><td class="shortcut-key">SHIFT + ALT + 3</td><td data-i18n="sts.sidebar.4">Split into 3 side groups</td></tr>
+          <tr><td class="shortcut-key">SHIFT + ALT + 4</td><td data-i18n="sts.sidebar.5">Split into 4 side groups</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- ==================== FORMATAÇÃO E ZOOM ==================== -->
+    <!-- FORMATTING -->
     <div class="shortcut-section">
-      <h3>🔠 Formatação e Zoom</h3>
+      <h3 data-i18n="sts.format.title">🔠 Formatting and Zoom</h3>
       <table class="shortcut-table">
         <thead>
-          <tr><th>Atalho</th><th>O que faz</th> </tr>
+          <tr>
+            <th data-i18n="sts.col.shortcut">Shortcut</th>
+            <th data-i18n="sts.col.action">What it does</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td class="shortcut-key">CTRL + K + U</td><td>Transformar seleção em MAIÚSCULAS (Uppercase)</td> </tr>
-          <tr><td class="shortcut-key">CTRL + K + L</td><td>Transformar seleção em minúsculas (Lowercase)</td> </tr>
-          <tr><td class="shortcut-key">CTRL + Scroll (frente/trás)</td><td>Zoom in / Zoom out (aumenta/diminui fonte)</td> </tr>
+          <tr><td class="shortcut-key">CTRL + K + U</td><td data-i18n="sts.format.1">Transform selection to UPPERCASE</td></tr>
+          <tr><td class="shortcut-key">CTRL + K + L</td><td data-i18n="sts.format.2">Transform selection to lowercase</td></tr>
+          <tr><td class="shortcut-key">CTRL + Scroll (frente/trás)</td><td data-i18n="sts.format.3">Zoom in / Zoom out (increase/decrease font size)</td></tr>
         </tbody>
       </table>
     </div>
 
-    <!-- ==================== DICAS DE PRODUTIVIDADE ==================== -->
+    <!-- TIPS -->
     <div class="shortcut-section">
-      <h3>💡 Dicas de Produtividade</h3>
+      <h3 data-i18n="sts.tips.title">💡 Productivity Tips</h3>
       <table class="shortcut-table">
         <thead>
-          <tr><th>Dica</th><th>Descrição</th> </tr>
+          <tr>
+            <th data-i18n="sts.col.tip">Tip</th>
+            <th data-i18n="sts.col.desc">Description</th>
+          </tr>
         </thead>
         <tbody>
-          <tr><td class="shortcut-key">TAB</td><td>Auto-completar palavras já existentes no texto (usar setas para escolher)</td> </tr>
-          <tr><td class="shortcut-key">Espaço vs. Tab</td><td>Espaço = caractere simples; Tab = avanço de célula (útil para dados tabulares)</td> </tr>
-          <tr><td class="shortcut-key">CTRL + K + B + Click</td><td>Com Side Bar aberta, clique em arquivos com CTRL para abrir em nova guia</td> </tr>
+          <tr><td class="shortcut-key">TAB</td><td data-i18n="sts.tips.1">Auto-complete words already in the text (use arrows to choose)</td></tr>
+          <tr><td class="shortcut-key">Espaço vs. Tab</td><td data-i18n="sts.tips.2">Space = single character; Tab = cell advance (useful for tabular data)</td></tr>
+          <tr><td class="shortcut-key">CTRL + K + B + Click</td><td data-i18n="sts.tips.3">With Side Bar open, click files with CTRL to open in new tab</td></tr>
         </tbody>
       </table>
     </div>
 
     <div style="text-align: center; margin-top: 80px;">
-      <a href="https://github.com/ozumaru/Ozumaru-Sublime-Text/blob/main/Documents/Sublime%20Text%20-%20Atalhos.md" 
-         target="_blank" 
-         class="btn btn-primary">
-        VER LISTA COMPLETA NO GITHUB →
+      <a href="https://github.com/ozumaru/Ozumaru-Sublime-Text/blob/main/Documents/Sublime%20Text%20-%20Atalhos.md"
+         target="_blank" rel="noopener"
+         class="btn btn-primary"
+         data-i18n="sts.btn.repo">
+        VIEW FULL LIST ON GITHUB →
       </a>
     </div>
   </section>
@@ -171,10 +195,32 @@
 
   <footer>
     <div class="footer-logo">// OZUMARU</div>
-    <div class="footer-copy">© 2025 · José Osmar Caitano · NetDevOps</div>
-    <a href="../index.html" style="color:var(--cyan);">← Voltar para Home</a>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 · José Osmar Caitano · NetDevOps</div>
+    <a href="../index.html" style="color:var(--cyan);" data-i18n="footer.back">← Back to Home</a>
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script>
+    (function () {
+      const btn = document.getElementById('nav-hamburger');
+      const links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

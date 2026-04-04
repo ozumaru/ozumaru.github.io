@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>POO Network | Ozumaru</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050a0f'/><text x='50%25' y='54%25' font-family='monospace' font-size='18' font-weight='900' fill='%2300d4ff' text-anchor='middle' dominant-baseline='middle'>O</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -11,15 +12,24 @@
 <body>
   <div class="grid-bg"></div>
 
+  <!-- NAV -->
   <nav>
     <a class="nav-logo" href="../index.html"><span>//</span> OZUMARU</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../index.html#about">SOBRE</a></li>
-      <li><a href="../index.html#skills">SKILLS</a></li>
-      <li><a href="../index.html#projects">PROJETOS</a></li>
-      <li><a href="../index.html#certs">CERTS</a></li>
-      <li><a href="../index.html#contact">CONTATO</a></li>
+    <div class="nav-right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-flag">🇧🇷</span><span class="lang-label">PT</span>
+      </button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html"          data-i18n="nav.home">HOME</a></li>
+      <li><a href="../index.html#about"    data-i18n="nav.about">ABOUT</a></li>
+      <li><a href="../index.html#skills"   data-i18n="nav.skills">SKILLS</a></li>
+      <li><a href="../index.html#projects" data-i18n="nav.projects">PROJECTS</a></li>
+      <li><a href="../index.html#certs"    data-i18n="nav.certs">CERTS</a></li>
+      <li><a href="../index.html#contact"  data-i18n="nav.contact">CONTACT</a></li>
     </ul>
   </nav>
 
@@ -28,15 +38,15 @@
     <div class="hero-content" style="max-width: 920px;">
       <div class="hero-tag">PYTHON • NETMIKO • REFACTORING</div>
       <h1 class="hero-name">POO Python<br><span class="accent">— Network</span></h1>
-      <div class="hero-title">Projeto — Backup, Interfaces & VLANs</div>
-      <p class="hero-desc">
-        Projeto prático: automação de backup, relatório de interfaces e criação de VLANs 
-        com forte ênfase em refatoração e código reutilizável.
+      <div class="hero-title" data-i18n="cfp.hero.title">Project — Backup, Interfaces & VLANs</div>
+      <p class="hero-desc" data-i18n="cfp.hero.desc">
+        Practical project: backup automation, interface reports and VLAN creation
+        with strong emphasis on refactoring and reusable code.
       </p>
       <div class="hero-btns">
-        <a href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank" class="btn btn-primary">REPOSITÓRIO NO GITHUB</a>
-        <a href="https://github.com/ozumaru/CiscoDevNet---Python/tree/master/Documents/Projetos/Primeiro" target="_blank" class="btn btn-outline">VER PASTA "PRIMEIRO"</a>
-        <a href="../index.html#projects" class="btn btn-outline">← VOLTAR</a>
+        <a href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="cfp.hero.btn">REPOSITORY ON GITHUB</a>
+        <a href="https://github.com/ozumaru/CiscoDevNet---Python/tree/master/Documents/Projetos/Primeiro" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="cfp.hero.btn2">VIEW "PRIMEIRO" FOLDER</a>
+        <a href="../index.html#projects" class="btn btn-outline" data-i18n="cfp.hero.back">← BACK</a>
       </div>
     </div>
   </div>
@@ -45,62 +55,54 @@
 
   <section style="padding: 80px 40px; max-width: 1100px; margin: 0 auto;">
     <div class="section-header fade-in">
-      <div class="section-tag">PROJETO 01</div>
-      <h2 class="section-title">Primeiro <span>Projeto Prático</span></h2>
+      <div class="section-tag" data-i18n="cfp.section.tag">PROJECT 01</div>
+      <h2 class="section-title" data-i18n="cfp.section.title">First <span>Practical Project</span></h2>
       <div class="section-line"></div>
     </div>
 
     <div class="about-text" style="max-width: 850px;">
-      <p>
-        Este mini-projeto demonstra a automação de três tarefas essenciais em redes Cisco, 
-        com foco em <strong>refatoração de código</strong> para criar soluções limpas, reutilizáveis e fáceis de manter.
-      </p>
-      <p>
-        Desenvolvido durante a iniciativa <strong>Women Rock IT (WRIT)</strong> da Cisco, 
-        o projeto ensina a passar de scripts "bagunçados" para código profissional usando funções e instâncias (classes).
-      </p>
+      <p data-i18n="cfp.p1">This mini-project demonstrates the automation of three essential tasks on Cisco networks, with a focus on <strong>code refactoring</strong> to create clean, reusable and maintainable solutions.</p>
+      <p data-i18n="cfp.p2">Developed during Cisco's <strong>Women Rock IT (WRIT)</strong> initiative, the project teaches how to evolve from messy scripts to professional code using functions and instances (classes).</p>
     </div>
 
-    <h3 style="margin: 60px 0 30px; color: var(--cyan);">🚀 As 3 Tarefas do Projeto</h3>
+    <h3 style="margin: 60px 0 30px; color: var(--cyan);" data-i18n="cfp.tasks.title">🚀 The 3 Project Tasks</h3>
 
     <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
-      
       <div class="project-card" style="cursor: default;">
-        <div class="project-tag">// BACKUP</div>
-        <div class="project-title">Rotina de Backup</div>
-        <p class="project-desc">Automatiza o backup de configuração de dispositivos Cisco de forma organizada e reutilizável.</p>
+        <div class="project-tag" data-i18n="cfp.task1.tag">// BACKUP</div>
+        <div class="project-title" data-i18n="cfp.task1.title">Backup Routine</div>
+        <p class="project-desc" data-i18n="cfp.task1.desc">Automates configuration backup of Cisco devices in an organized and reusable way.</p>
       </div>
-
       <div class="project-card" style="cursor: default;">
-        <div class="project-tag">// INTERFACE</div>
-        <div class="project-title">Relatório de Interfaces</div>
-        <p class="project-desc">Gera relatório detalhado de status de interfaces (GigabitEthernet, Loopback, VLAN) com saída em JSON.</p>
+        <div class="project-tag" data-i18n="cfp.task2.tag">// INTERFACE</div>
+        <div class="project-title" data-i18n="cfp.task2.title">Interface Report</div>
+        <p class="project-desc" data-i18n="cfp.task2.desc">Generates detailed interface status report (GigabitEthernet, Loopback, VLAN) with JSON output.</p>
       </div>
-
       <div class="project-card" style="cursor: default;">
-        <div class="project-tag">// VLAN</div>
-        <div class="project-title">Criação de VLANs em Massa</div>
-        <p class="project-desc">Aplica VLANs automaticamente e coleta o estado do switch antes e depois da configuração.</p>
+        <div class="project-tag" data-i18n="cfp.task3.tag">// VLAN</div>
+        <div class="project-title" data-i18n="cfp.task3.title">Bulk VLAN Creation</div>
+        <p class="project-desc" data-i18n="cfp.task3.desc">Automatically applies VLANs and collects switch state before and after the configuration.</p>
       </div>
     </div>
 
     <div style="margin: 70px 0 40px;">
-      <h3 style="color: var(--cyan); margin-bottom: 20px;">🔄 Processo de Refatoração</h3>
+      <h3 style="color: var(--cyan); margin-bottom: 20px;" data-i18n="cfp.refactor.title">🔄 Refactoring Process</h3>
       <ul style="font-family: 'Share Tech Mono', monospace; line-height: 2; color: var(--text);">
-        <li>→ Criação de funções reutilizáveis</li>
-        <li>→ Uso de instâncias (classes) para agrupar operações comuns</li>
-        <li>→ Tratamento de saída de comandos Cisco para JSON estruturado</li>
-        <li>→ Coleta de estado antes/depois das alterações</li>
-        <li>→ Redução de código duplicado e melhoria na legibilidade</li>
+        <li data-i18n="cfp.refactor.li1">→ Creation of reusable functions</li>
+        <li data-i18n="cfp.refactor.li2">→ Use of instances (classes) to group common operations</li>
+        <li data-i18n="cfp.refactor.li3">→ Processing Cisco command output into structured JSON</li>
+        <li data-i18n="cfp.refactor.li4">→ State collection before/after changes</li>
+        <li data-i18n="cfp.refactor.li5">→ Reduced duplicate code and improved readability</li>
       </ul>
     </div>
 
     <div style="text-align: center; margin-top: 60px;">
-      <a href="https://github.com/ozumaru/CiscoDevNet---Python/tree/master/Documents/Projetos/Primeiro" 
-         target="_blank" 
-         class="btn btn-primary" 
-         style="padding: 18px 50px; font-size: 1.05rem;">
-        ACESSAR O REPOSITÓRIO DO PROJETO →
+      <a href="https://github.com/ozumaru/CiscoDevNet---Python/tree/master/Documents/Projetos/Primeiro"
+         target="_blank" rel="noopener"
+         class="btn btn-primary"
+         style="padding: 18px 50px; font-size: 1.05rem;"
+         data-i18n="cfp.btn.repo">
+        ACCESS THE PROJECT REPOSITORY →
       </a>
     </div>
   </section>
@@ -109,10 +111,32 @@
 
   <footer>
     <div class="footer-logo">// OZUMARU</div>
-    <div class="footer-copy">© 2025 · José Osmar Caitano · NetDevOps</div>
-    <a href="../index.html" style="color:var(--cyan);">← Voltar para Home</a>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 · José Osmar Caitano · NetDevOps</div>
+    <a href="../index.html" style="color:var(--cyan);" data-i18n="footer.back">← Back to Home</a>
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script>
+    (function () {
+      const btn = document.getElementById('nav-hamburger');
+      const links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

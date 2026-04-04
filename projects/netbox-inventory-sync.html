@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NetBox Inventory Sync | Ozumaru</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050a0f'/><text x='50%25' y='54%25' font-family='monospace' font-size='18' font-weight='900' fill='%2300d4ff' text-anchor='middle' dominant-baseline='middle'>O</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -11,30 +12,39 @@
 <body>
   <div class="grid-bg"></div>
 
+  <!-- NAV -->
   <nav>
     <a class="nav-logo" href="../index.html"><span>//</span> OZUMARU</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../index.html#about">SOBRE</a></li>
-      <li><a href="../index.html#skills">SKILLS</a></li>
-      <li><a href="../index.html#projects">PROJETOS</a></li>
-      <li><a href="../index.html#certs">CERTS</a></li>
-      <li><a href="../index.html#contact">CONTATO</a></li>
+    <div class="nav-right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-flag">🇧🇷</span><span class="lang-label">PT</span>
+      </button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html"          data-i18n="nav.home">HOME</a></li>
+      <li><a href="../index.html#about"    data-i18n="nav.about">ABOUT</a></li>
+      <li><a href="../index.html#skills"   data-i18n="nav.skills">SKILLS</a></li>
+      <li><a href="../index.html#projects" data-i18n="nav.projects">PROJECTS</a></li>
+      <li><a href="../index.html#certs"    data-i18n="nav.certs">CERTS</a></li>
+      <li><a href="../index.html#contact"  data-i18n="nav.contact">CONTACT</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <div class="hero" style="min-height: 65vh; padding-top: 140px;">
     <div class="hero-content" style="max-width: 920px;">
-      <div class="hero-tag">NETDEVOPS • INTERNO • NETBOX</div>
+      <div class="hero-tag">NETDEVOPS • INTERNAL • NETBOX</div>
       <h1 class="hero-name">NetBox Inventory<br><span class="accent">Sync Engine</span></h1>
-      <div class="hero-title">Sincronização Automática de Inventário Corporativo</div>
-      <p class="hero-desc">
-        Motor de reconciliação que mantém o NetBox sempre consistente com a realidade da rede, 
-        sincronizando automaticamente dados de um banco CSV com validações hierárquicas completas.
+      <div class="hero-title" data-i18n="nbs.hero.title">Automatic Corporate Inventory Synchronization</div>
+      <p class="hero-desc" data-i18n="nbs.hero.desc">
+        A reconciliation engine that keeps NetBox always consistent with the real network state,
+        automatically syncing data from a CSV database with full hierarchical validations.
       </p>
       <div class="hero-btns">
-        <a href="../index.html#projects" class="btn btn-outline">← VOLTAR AOS PROJETOS</a>
+        <a href="../index.html#projects" class="btn btn-outline" data-i18n="nbs.hero.back">← BACK TO PROJECTS</a>
       </div>
     </div>
   </div>
@@ -43,75 +53,68 @@
 
   <section style="padding: 80px 40px; max-width: 1100px; margin: 0 auto;">
     <div class="section-header fade-in">
-      <div class="section-tag">PROJETO INTERNO</div>
-      <h2 class="section-title">Reconciliação de <span>Inventário NetBox</span></h2>
+      <div class="section-tag" data-i18n="nbs.section.tag">INTERNAL PROJECT</div>
+      <h2 class="section-title" data-i18n="nbs.section.title">NetBox <span>Inventory Reconciliation</span></h2>
       <div class="section-line"></div>
     </div>
 
     <div class="about-text" style="max-width: 850px; margin-bottom: 60px;">
-      <p>
-        Projeto interno de automação avançada desenvolvido para garantir <strong>consistência total</strong> 
-        do inventário de rede no NetBox. Ele compara o estado desejado (CSV) com o estado atual no NetBox 
-        e realiza todas as criações e atualizações necessárias de forma hierárquica e idempotente.
-      </p>
+      <p data-i18n="nbs.p1">Advanced internal automation project developed to ensure <strong>full consistency</strong> of the network inventory in NetBox. It compares the desired state (CSV) with the current state in NetBox and performs all necessary creates and updates in a hierarchical and idempotent way.</p>
     </div>
 
-    <!-- Funcionalidades Principais -->
-    <h3 style="margin: 50px 0 25px; color: var(--cyan);">✅ O que o sistema faz automaticamente</h3>
+    <h3 style="margin: 50px 0 25px; color: var(--cyan);" data-i18n="nbs.feat.title">✅ What the system does automatically</h3>
     <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Manufacturers</div>
-        <p class="project-desc">Cria fabricantes se não existirem</p>
+        <div class="project-title" data-i18n="nbs.feat1.title">Manufacturers</div>
+        <p class="project-desc" data-i18n="nbs.feat1.desc">Creates manufacturers if they don't exist</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Device Roles</div>
-        <p class="project-desc">Cria papéis (Switch, Router, etc.)</p>
+        <div class="project-title" data-i18n="nbs.feat2.title">Device Roles</div>
+        <p class="project-desc" data-i18n="nbs.feat2.desc">Creates roles (Switch, Router, etc.)</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Device Types (Models)</div>
-        <p class="project-desc">Cria modelos de equipamentos</p>
+        <div class="project-title" data-i18n="nbs.feat3.title">Device Types (Models)</div>
+        <p class="project-desc" data-i18n="nbs.feat3.desc">Creates equipment models</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Sites & Locations</div>
-        <p class="project-desc">Gerencia sites e localidades</p>
+        <div class="project-title" data-i18n="nbs.feat4.title">Sites & Locations</div>
+        <p class="project-desc" data-i18n="nbs.feat4.desc">Manages sites and locations</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Devices + MGMT Interface</div>
-        <p class="project-desc">Cadastra dispositivos e interface de gerenciamento</p>
+        <div class="project-title" data-i18n="nbs.feat5.title">Devices + MGMT Interface</div>
+        <p class="project-desc" data-i18n="nbs.feat5.desc">Registers devices and management interface</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">IPv4 Management</div>
-        <p class="project-desc">Configura IP de gerenciamento e define como Primary</p>
+        <div class="project-title" data-i18n="nbs.feat6.title">IPv4 Management</div>
+        <p class="project-desc" data-i18n="nbs.feat6.desc">Configures management IP and sets it as Primary</p>
       </div>
     </div>
 
-    <!-- Arquitetura -->
-    <h3 style="margin: 70px 0 30px; color: var(--cyan);">🏗️ Arquitetura em Camadas</h3>
+    <h3 style="margin: 70px 0 30px; color: var(--cyan);" data-i18n="nbs.arch.title">🏗️ Layered Architecture</h3>
     <div class="about-text">
-      <p><strong>Camadas principais do projeto:</strong></p>
+      <p data-i18n="nbs.arch.intro"><strong>Main project layers:</strong></p>
       <ul style="font-family: 'Share Tech Mono', monospace; line-height: 2.2; color: var(--text);">
-        <li><strong>Conexão API</strong> — Requisições REST seguras e padronizadas</li>
-        <li><strong>Coleta de Dados</strong> — Leitura do CSV + consulta completa no NetBox</li>
-        <li><strong>Validação Hierárquica</strong> — Verifica existência antes de criar (idempotente)</li>
-        <li><strong>Orquestração</strong> — Fluxo controlado em `main_netbox.py`</li>
+        <li data-i18n="nbs.arch.li1"><strong>API Connection</strong> — Secure and standardized REST requests</li>
+        <li data-i18n="nbs.arch.li2"><strong>Data Collection</strong> — CSV reading + full NetBox query</li>
+        <li data-i18n="nbs.arch.li3"><strong>Hierarchical Validation</strong> — Checks existence before creating (idempotent)</li>
+        <li data-i18n="nbs.arch.li4"><strong>Orchestration</strong> — Controlled flow in `main_netbox.py`</li>
       </ul>
     </div>
 
     <div style="margin-top: 60px; text-align: center;">
       <div style="background: var(--surface); border: 1px solid var(--border); padding: 28px; border-radius: 4px; max-width: 700px; margin: 0 auto;">
-        <p style="color: var(--orange); font-family: 'Share Tech Mono', monospace; margin-bottom: 12px;">
-          STATUS: PROJETO INTERNO ATIVO
+        <p style="color: var(--orange); font-family: 'Share Tech Mono', monospace; margin-bottom: 12px;" data-i18n="nbs.status">
+          STATUS: ACTIVE INTERNAL PROJECT
         </p>
-        <p style="color: var(--text2);">
-          Este projeto demonstra minha capacidade de construir soluções de automação robustas, 
-          com arquitetura modular, validações fortes e integração profunda com NetBox.
+        <p style="color: var(--text2);" data-i18n="nbs.status.desc">
+          This project demonstrates my ability to build robust automation solutions with modular architecture, strong validations and deep NetBox integration.
         </p>
       </div>
     </div>
 
     <div style="margin-top: 80px; text-align: center;">
-      <a href="../index.html#projects" class="btn btn-primary" style="padding: 16px 48px;">
-        VOLTAR PARA PROJETOS
+      <a href="../index.html#projects" class="btn btn-primary" style="padding: 16px 48px;" data-i18n="nbs.btn.back">
+        BACK TO PROJECTS
       </a>
     </div>
   </section>
@@ -120,10 +123,32 @@
 
   <footer>
     <div class="footer-logo">// OZUMARU</div>
-    <div class="footer-copy">© 2025 · José Osmar Caitano · NetDevOps</div>
-    <a href="../index.html" style="color:var(--cyan);">← Voltar para Home</a>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 · José Osmar Caitano · NetDevOps</div>
+    <a href="../index.html" style="color:var(--cyan);" data-i18n="footer.back">← Back to Home</a>
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script>
+    (function () {
+      const btn = document.getElementById('nav-hamburger');
+      const links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CiscoDevNet — Python | Ozumaru</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23050a0f'/><text x='50%25' y='54%25' font-family='monospace' font-size='18' font-weight='900' fill='%2300d4ff' text-anchor='middle' dominant-baseline='middle'>O</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -14,97 +15,120 @@
   <!-- NAV -->
   <nav>
     <a class="nav-logo" href="../index.html"><span>//</span> OZUMARU</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">HOME</a></li>
-      <li><a href="../index.html#about">SOBRE</a></li>
-      <li><a href="../index.html#skills">SKILLS</a></li>
-      <li><a href="../index.html#projects">PROJETOS</a></li>
-      <li><a href="../index.html#certs">CERTS</a></li>
-      <li><a href="../index.html#contact">CONTATO</a></li>
+    <div class="nav-right">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">
+        <span class="lang-flag">🇧🇷</span><span class="lang-label">PT</span>
+      </button>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html"          data-i18n="nav.home">HOME</a></li>
+      <li><a href="../index.html#about"    data-i18n="nav.about">ABOUT</a></li>
+      <li><a href="../index.html#skills"   data-i18n="nav.skills">SKILLS</a></li>
+      <li><a href="../index.html#projects" data-i18n="nav.projects">PROJECTS</a></li>
+      <li><a href="../index.html#certs"    data-i18n="nav.certs">CERTS</a></li>
+      <li><a href="../index.html#contact"  data-i18n="nav.contact">CONTACT</a></li>
     </ul>
   </nav>
 
-  <!-- HERO ESPECÍFICO DO PROJETO -->
+  <!-- HERO -->
   <div class="hero" style="min-height: 65vh; padding-top: 140px;">
     <div class="hero-content" style="max-width: 920px;">
       <div class="hero-tag">PYTHON • NETMIKO • CISCO</div>
       <h1 class="hero-name">CiscoDevNet<br><span class="accent">— Python</span></h1>
-      <div class="hero-title">Automação de redes do básico ao avançado</div>
-      <p class="hero-desc">
-        Repositório completo para aprender e aplicar Python na prática em infraestrutura Cisco. 
-        Do acesso SSH até coleta estruturada de dados em CSV.
+      <div class="hero-title" data-i18n="cdp.hero.title">Network automation from basics to advanced</div>
+      <p class="hero-desc" data-i18n="cdp.hero.desc">
+        Complete repository to learn and apply Python in practice on Cisco infrastructure.
+        From SSH access to structured data collection in CSV.
       </p>
       <div class="hero-btns">
-        <a href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank" class="btn btn-primary">VER NO GITHUB</a>
-        <a href="../index.html#projects" class="btn btn-outline">← VOLTAR AOS PROJETOS</a>
+        <a href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank" rel="noopener" class="btn btn-primary" data-i18n="cdp.hero.btn">VIEW ON GITHUB</a>
+        <a href="../index.html#projects" class="btn btn-outline" data-i18n="cdp.hero.back">← BACK TO PROJECTS</a>
       </div>
     </div>
   </div>
 
   <div class="divider"></div>
 
-  <!-- CONTEÚDO DETALHADO -->
+  <!-- CONTENT -->
   <section style="padding: 80px 40px; max-width: 1100px; margin: 0 auto;">
     <div class="section-header fade-in">
-      <div class="section-tag">O PROJETO</div>
-      <h2 class="section-title">O que você vai <span>encontrar</span> aqui</h2>
+      <div class="section-tag" data-i18n="cdp.section.tag">THE PROJECT</div>
+      <h2 class="section-title" data-i18n="cdp.section.title">What you'll <span>find</span> here</h2>
       <div class="section-line"></div>
     </div>
 
     <div class="about-text" style="font-size: 1.05rem; line-height: 1.9;">
-      <p>
-        Este repositório é um <strong>guia prático completo</strong> de automação de redes Cisco usando Python. 
-        Foi feito pensando em Network Engineers que querem sair do “clicar no CLI” e começar a automatizar tarefas reais.
-      </p>
-      <p>
-        Você vai aprender desde o básico (criar arquivos, usar data/hora, conexão SSH) até scripts mais avançados 
-        como criação de VLANs em massa, Loopbacks, links P2P e coleta de informações CDP exportadas em CSV.
-      </p>
+      <p data-i18n="cdp.p1">This repository is a <strong>complete practical guide</strong> to Cisco network automation using Python. It was built for Network Engineers who want to move beyond the CLI and start automating real tasks.</p>
+      <p data-i18n="cdp.p2">You'll learn from the basics (file creation, timestamps, SSH connections) to more advanced scripts such as bulk VLAN creation, Loopbacks, P2P links and CDP data collection exported to CSV.</p>
     </div>
 
-    <h3 style="margin: 60px 0 20px; color: var(--cyan);">📁 Estrutura do repositório</h3>
+    <h3 style="margin: 60px 0 20px; color: var(--cyan);" data-i18n="cdp.struct.title">📁 Repository structure</h3>
     <ul style="font-family: 'Share Tech Mono', monospace; font-size: 1rem; line-height: 2; color: var(--text2);">
-      <li><strong>Documents/</strong> → Passo a passo em .md (do básico ao avançado)</li>
-      <li><strong>Projetos/</strong> → Mini-projetos práticos prontos para usar</li>
-      <li><strong>Netmiko</strong> + Python puro</li>
+      <li data-i18n="cdp.struct.li1"><strong>Documents/</strong> → Step-by-step guides in .md (basic to advanced)</li>
+      <li data-i18n="cdp.struct.li2"><strong>Projects/</strong> → Ready-to-use practical mini-projects</li>
+      <li data-i18n="cdp.struct.li3">Netmiko + pure Python</li>
     </ul>
 
-    <h3 style="margin: 60px 0 20px; color: var(--cyan);">🚀 Principais funcionalidades</h3>
+    <h3 style="margin: 60px 0 20px; color: var(--cyan);" data-i18n="cdp.feat.title">🚀 Main features</h3>
     <div class="projects-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Conexão SSH com Netmiko</div>
-        <p class="project-desc">Acesso automático a múltiplos switches/routers</p>
+        <div class="project-title" data-i18n="cdp.feat1.title">SSH connection with Netmiko</div>
+        <p class="project-desc" data-i18n="cdp.feat1.desc">Automated access to multiple switches/routers</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Criação de VLANs em massa</div>
-        <p class="project-desc">Comando único para dezenas de VLANs</p>
+        <div class="project-title" data-i18n="cdp.feat2.title">Bulk VLAN creation</div>
+        <p class="project-desc" data-i18n="cdp.feat2.desc">Single command for dozens of VLANs</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Loopbacks e P2P automáticos</div>
-        <p class="project-desc">Configuração e validação completa</p>
+        <div class="project-title" data-i18n="cdp.feat3.title">Automatic Loopbacks & P2P</div>
+        <p class="project-desc" data-i18n="cdp.feat3.desc">Full configuration and validation</p>
       </div>
       <div class="project-card" style="cursor: default;">
-        <div class="project-title">Coleta de CDP → CSV</div>
-        <p class="project-desc">Exportação estruturada de vizinhança</p>
+        <div class="project-title" data-i18n="cdp.feat4.title">CDP Collection → CSV</div>
+        <p class="project-desc" data-i18n="cdp.feat4.desc">Structured export of neighbor data</p>
       </div>
     </div>
 
     <div style="margin-top: 80px; text-align: center;">
-      <a href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank" class="btn btn-primary" style="font-size: 1rem; padding: 16px 40px;">
-        ACESSAR O REPOSITÓRIO COMPLETO →
+      <a href="https://github.com/ozumaru/CiscoDevNet---Python" target="_blank" rel="noopener" class="btn btn-primary" style="font-size: 1rem; padding: 16px 40px;" data-i18n="cdp.btn.repo">
+        ACCESS THE FULL REPOSITORY →
       </a>
     </div>
   </section>
 
   <div class="divider"></div>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">// OZUMARU</div>
-    <div class="footer-copy">© 2025 · José Osmar Caitano · NetDevOps</div>
-    <a href="../index.html" style="color:var(--cyan);">← Voltar para Home</a>
+    <div class="footer-copy" data-i18n="footer.copy">© 2026 · José Osmar Caitano · NetDevOps</div>
+    <a href="../index.html" style="color:var(--cyan);" data-i18n="footer.back">← Back to Home</a>
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script>
+    (function () {
+      const btn = document.getElementById('nav-hamburger');
+      const links = document.getElementById('nav-links');
+      if (!btn || !links) return;
+      btn.addEventListener('click', () => {
+        const open = links.classList.toggle('open');
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      links.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          links.classList.remove('open');
+          btn.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
