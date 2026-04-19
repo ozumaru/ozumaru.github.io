@@ -402,3 +402,12 @@ function initLangToggle() {
 }
 
 document.addEventListener('DOMContentLoaded', initLangToggle);
+
+fetch('https://api.github.com/users/ozumaru')
+  .then(r => r.json())
+  .then(data => {
+    document.getElementById('github-followers').textContent = data.followers;
+  })
+  .catch(() => {
+    // Se falhar (ex: rate limit), mantém o valor atual na tela
+  });

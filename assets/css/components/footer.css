@@ -22,3 +22,14 @@ footer {
     color: var(--text2);
     letter-spacing: 1px;
 }
+
+/* Visit counter */
+.footer-visits {
+  margin-top: 8px;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.footer-visits:hover {
+  opacity: 1;
+}
